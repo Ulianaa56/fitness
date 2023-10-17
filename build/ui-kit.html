@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>UI-kit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Фитнес центр Supergym">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" href="fonts/alumni-sans-800.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-400.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-700.woff2" as="font" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="visually-hidden"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<clipPath id="clip0_402_66">
+<rect width="32" height="32" fill="white"/>
+</clipPath>
+
+<clipPath id="clip0_401_61">
+<rect width="17" height="17" fill="currentColor"/>
+</clipPath>
+</defs><symbol id="icon-arrow" viewBox="0 0 32 32"><g fill="none">
+<g clip-path="url(#clip0_402_66)">
+<path d="M22 0L6 16L22 32" stroke="currentColor"/>
+</g>
+
+</g></symbol><symbol id="icon-close" viewBox="0 0 20 20"><g fill="none"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z" fill="#ffffff"/></g></symbol><symbol id="icon-play" viewBox="0 0 17 17"><g fill="none">
+<g clip-path="url(#clip0_401_61)">
+<path d="M17 8.5L4.25 15.8612L4.25 1.13878L17 8.5Z" fill="currentColor"/>
+</g>
+
+</g></symbol><symbol id="icon-ruble" viewBox="0 0 30 42"><g fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 17H6V23H0V17Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.65854 28.3214V18H9.65854V28.3214H21V34.3214H9.65854V42H3.65854V34.3214H0V28.3214H3.65854Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 6H10V17H18.5C21.5376 17 24 14.5376 24 11.5C24 8.46243 21.5376 6 18.5 6ZM4 0V23H18.5C24.8513 23 30 17.8513 30 11.5C30 5.14873 24.8513 0 18.5 0H4Z" fill="currentColor"/>
+</g></symbol><symbol id="logo-ok" viewBox="0 0 25 25"><g fill="none">
+<path d="M12.4146 7.38024C13.3131 7.38024 14.0438 8.13455 14.0438 9.06206C14.0438 9.98678 13.3131 10.7411 12.4146 10.7411C11.5161 10.7411 10.7854 9.98678 10.7854 9.06206C10.7854 8.13455 11.5161 7.38024 12.4146 7.38024ZM12.4146 13.1213C14.5851 13.1213 16.3496 11.2998 16.3496 9.06206C16.3496 6.8215 14.5851 5 12.4146 5C10.2442 5 8.48237 6.8215 8.48237 9.06206C8.48237 11.2998 10.2442 13.1213 12.4146 13.1213ZM14.0059 16.4347C14.807 16.2447 15.5783 15.9178 16.2901 15.4569C16.8286 15.1077 16.991 14.3729 16.6527 13.817C16.3117 13.2582 15.6027 13.0906 15.0614 13.4426C13.4512 14.4875 11.3781 14.4875 9.76516 13.4426C9.22661 13.0906 8.51485 13.2582 8.17656 13.817C7.83827 14.3729 8.00065 15.1077 8.53921 15.4569C9.25096 15.9178 10.0223 16.2447 10.8233 16.4347L8.6231 18.7032C8.17385 19.1669 8.17385 19.9212 8.6231 20.385C8.85043 20.6169 9.14271 20.7342 9.4377 20.7342C9.73269 20.7342 10.0277 20.6169 10.255 20.385L12.4146 18.1556L14.577 20.385C15.0262 20.8515 15.7542 20.8515 16.2062 20.385C16.6554 19.9212 16.6554 19.1669 16.2062 18.7032L14.0059 16.4347Z" fill="currentColor"/>
+</g></symbol><symbol id="logo-reddit" viewBox="0 0 25 25"><g fill="none">
+<path d="M13.2953 6C12.85 6 12.432 6.22593 12.164 6.55175C11.8959 6.87757 11.7481 7.27473 11.6405 7.6933C11.4695 8.36634 11.4167 9.11311 11.4041 9.78615C10.1524 9.86939 9.0189 10.2404 8.07749 10.8135C7.69544 10.4925 7.23529 10.3141 6.79414 10.3189C6.29177 10.3236 5.81473 10.54 5.46012 10.9848C4.78256 11.8338 4.86066 13.2227 5.64587 14.0479C5.59732 14.3024 5.56144 14.564 5.56144 14.828C5.56144 17.6248 8.41944 19.8889 11.9444 19.8889C15.4695 19.8889 18.3274 17.6224 18.3274 14.828C18.3274 14.564 18.2916 14.3024 18.243 14.0479C19.0282 13.2227 19.1063 11.8338 18.4288 10.9848C18.0742 10.54 17.5971 10.3236 17.0948 10.3189C16.6536 10.3141 16.1934 10.4925 15.8114 10.8135C14.8742 10.2428 13.7471 9.87177 12.5017 9.78615C12.5186 9.16543 12.5629 8.52093 12.6874 8.03577C12.7655 7.73135 12.8584 7.51018 12.9576 7.38889C13.0568 7.2676 13.1286 7.21766 13.2953 7.21766C13.6563 7.21766 13.7027 7.33419 13.9201 7.6172C14.0299 7.75989 14.1565 7.93826 14.3592 8.11187C14.5618 8.28548 14.8615 8.43531 15.1866 8.43531V7.21766C15.0958 7.21766 15.079 7.21528 15.0177 7.16058C14.9565 7.10588 14.8721 6.97983 14.7476 6.81811C14.4985 6.49229 14.0151 6 13.2953 6ZM16.8077 6.11416C15.9676 6.11416 15.2879 6.87995 15.2879 7.82648C15.2879 8.77302 15.9676 9.53881 16.8077 9.53881C17.6478 9.53881 18.3274 8.77302 18.3274 7.82648C18.3274 6.87995 17.6478 6.11416 16.8077 6.11416ZM16.8077 6.72298C17.348 6.72298 17.7871 7.21766 17.7871 7.82648C17.7871 8.43531 17.348 8.92998 16.8077 8.92998C16.2673 8.92998 15.8283 8.43531 15.8283 7.82648C15.8283 7.21766 16.2673 6.72298 16.8077 6.72298ZM11.9444 10.7374C14.9354 10.7374 17.4663 12.6139 17.4663 14.828C17.4663 17.0445 14.9354 18.9186 11.9444 18.9186C8.95347 18.9186 6.42264 17.0445 6.42264 14.828C6.42264 12.6139 8.95347 10.7374 11.9444 10.7374ZM6.81102 11.2892C6.96089 11.2916 7.11709 11.3296 7.26695 11.4033C6.72448 11.8671 6.29388 12.3998 6.00048 13.0015C5.79785 12.5306 5.85273 11.9432 6.1018 11.6317C6.28333 11.4033 6.53451 11.2868 6.81102 11.2892ZM17.0779 11.2892C17.3544 11.2868 17.6056 11.4033 17.7871 11.6317C18.0362 11.9432 18.091 12.5306 17.8884 13.0015C17.595 12.3998 17.1644 11.8671 16.6219 11.4033C16.7718 11.3296 16.928 11.2916 17.0779 11.2892ZM9.783 12.8113C9.24264 12.8113 8.8036 13.3059 8.8036 13.9148C8.8036 14.5236 9.24264 15.0183 9.783 15.0183C10.3234 15.0183 10.7624 14.5236 10.7624 13.9148C10.7624 13.3059 10.3234 12.8113 9.783 12.8113ZM14.1059 12.8113C13.5655 12.8113 13.1265 13.3059 13.1265 13.9148C13.1265 14.5236 13.5655 15.0183 14.1059 15.0183C14.6462 15.0183 15.0853 14.5236 15.0853 13.9148C15.0853 13.3059 14.6462 12.8113 14.1059 12.8113ZM9.25953 16.5594C9.60359 17.3608 10.6674 18.1385 11.9444 18.1385C13.2215 18.1385 14.3022 17.3608 14.6462 16.5594C14.0215 17.0136 13.0357 17.3204 11.9444 17.3204C10.8532 17.3204 9.88432 17.0136 9.25953 16.5594Z" fill="currentColor"/>
+</g></symbol><symbol id="logo-thin" viewBox="0 0 107 19"><g fill="none">
+<path d="M9.30469 13.6875C9.30469 13.2891 9.25781 12.9375 9.16406 12.6328C9.07031 12.3203 8.90625 12.0391 8.67188 11.7891C8.4375 11.5391 8.10938 11.3008 7.6875 11.0742C7.26562 10.8477 6.73047 10.6172 6.08203 10.3828C5.37891 10.1328 4.74219 9.85547 4.17188 9.55078C3.60156 9.23828 3.11328 8.88281 2.70703 8.48438C2.30859 8.08594 2 7.62891 1.78125 7.11328C1.5625 6.59766 1.45312 6.00781 1.45312 5.34375C1.45312 4.67969 1.56641 4.06641 1.79297 3.50391C2.02734 2.94141 2.35547 2.45312 2.77734 2.03906C3.20703 1.61719 3.72266 1.28906 4.32422 1.05469C4.92578 0.820312 5.59766 0.703125 6.33984 0.703125C7.44922 0.703125 8.38281 0.949219 9.14062 1.44141C9.90625 1.92578 10.4844 2.5625 10.875 3.35156C11.2656 4.13281 11.4609 4.96875 11.4609 5.85938H9.30469C9.30469 5.21875 9.19922 4.65234 8.98828 4.16016C8.78516 3.66016 8.46484 3.26953 8.02734 2.98828C7.59766 2.69922 7.03516 2.55469 6.33984 2.55469C5.71484 2.55469 5.19922 2.67578 4.79297 2.91797C4.39453 3.16016 4.09766 3.48828 3.90234 3.90234C3.71484 4.31641 3.62109 4.78906 3.62109 5.32031C3.62109 5.67969 3.68359 6.00781 3.80859 6.30469C3.93359 6.59375 4.125 6.86328 4.38281 7.11328C4.64844 7.36328 4.97656 7.59375 5.36719 7.80469C5.76562 8.01562 6.23438 8.21875 6.77344 8.41406C7.60938 8.6875 8.32422 8.99219 8.91797 9.32812C9.51172 9.66406 9.99609 10.043 10.3711 10.4648C10.7461 10.8789 11.0195 11.3516 11.1914 11.8828C11.3711 12.4062 11.4609 13 11.4609 13.6641C11.4609 14.3594 11.3438 14.9883 11.1094 15.5508C10.8828 16.1133 10.5508 16.5938 10.1133 16.9922C9.67578 17.3906 9.14844 17.6992 8.53125 17.918C7.91406 18.1289 7.21875 18.2344 6.44531 18.2344C5.77344 18.2344 5.11328 18.125 4.46484 17.9062C3.82422 17.6875 3.24219 17.3594 2.71875 16.9219C2.19531 16.4844 1.77734 15.9453 1.46484 15.3047C1.15234 14.6562 0.996094 13.9062 0.996094 13.0547H3.15234C3.15234 13.6406 3.23828 14.1445 3.41016 14.5664C3.58203 14.9805 3.82031 15.3242 4.125 15.5977C4.42969 15.8711 4.77734 16.0742 5.16797 16.207C5.56641 16.332 5.99219 16.3945 6.44531 16.3945C7.07031 16.3945 7.59375 16.2852 8.01562 16.0664C8.44531 15.8477 8.76562 15.5352 8.97656 15.1289C9.19531 14.7227 9.30469 14.2422 9.30469 13.6875ZM22.3125 0.9375H24.4688V12.9492C24.4688 14.2305 24.2227 15.2578 23.7305 16.0312C23.2383 16.8047 22.5898 17.3672 21.7852 17.7188C20.9883 18.0625 20.1289 18.2344 19.207 18.2344C18.2227 18.2344 17.3359 18.0625 16.5469 17.7188C15.7578 17.3672 15.1289 16.8047 14.6602 16.0312C14.1992 15.2578 13.9688 14.2305 13.9688 12.9492V0.9375H16.1133V12.9492C16.1133 13.8398 16.2383 14.5352 16.4883 15.0352C16.7461 15.5352 17.1055 15.8867 17.5664 16.0898C18.0352 16.293 18.582 16.3945 19.207 16.3945C19.8398 16.3945 20.3867 16.293 20.8477 16.0898C21.3164 15.8867 21.6758 15.5352 21.9258 15.0352C22.1836 14.5352 22.3125 13.8398 22.3125 12.9492V0.9375ZM33.1992 11.3086H29.4727V9.46875H33.1992C33.9023 9.46875 34.4688 9.32812 34.8984 9.04688C35.3359 8.76562 35.6523 8.375 35.8477 7.875C36.0508 7.375 36.1523 6.80469 36.1523 6.16406C36.1523 5.57812 36.0508 5.02734 35.8477 4.51172C35.6523 3.99609 35.3359 3.58203 34.8984 3.26953C34.4688 2.94922 33.9023 2.78906 33.1992 2.78906H29.918V18H27.7617V0.9375H33.1992C34.3008 0.9375 35.2305 1.16016 35.9883 1.60547C36.7461 2.05078 37.3203 2.66797 37.7109 3.45703C38.1094 4.23828 38.3086 5.13281 38.3086 6.14062C38.3086 7.23438 38.1094 8.16797 37.7109 8.94141C37.3203 9.71484 36.7461 10.3047 35.9883 10.7109C35.2305 11.1094 34.3008 11.3086 33.1992 11.3086ZM50.25 16.1602V18H42.8438V16.1602H50.25ZM43.2305 0.9375V18H41.0742V0.9375H43.2305ZM49.2539 8.27344V10.1133H42.8438V8.27344H49.2539ZM50.1328 0.9375V2.78906H42.8438V0.9375H50.1328ZM53.0156 0.9375H57.7852C58.8945 0.9375 59.8242 1.13281 60.5742 1.52344C61.332 1.91406 61.9023 2.49219 62.2852 3.25781C62.6758 4.01563 62.8711 4.94922 62.8711 6.05859C62.8711 6.83984 62.7422 7.55469 62.4844 8.20312C62.2266 8.84375 61.8516 9.39062 61.3594 9.84375C60.8672 10.2891 60.2695 10.6211 59.5664 10.8398L58.9805 11.0859H54.7266L54.7031 9.24609H57.7617C58.418 9.24609 58.9648 9.10547 59.4023 8.82422C59.8398 8.53516 60.168 8.14844 60.3867 7.66406C60.6055 7.17969 60.7148 6.64453 60.7148 6.05859C60.7148 5.40234 60.6172 4.82812 60.4219 4.33594C60.2266 3.84375 59.9141 3.46484 59.4844 3.19922C59.0625 2.92578 58.4961 2.78906 57.7852 2.78906H55.1719V18H53.0156V0.9375ZM61.207 18L57.8086 10.2656L60.0469 10.2539L63.5156 17.8594V18H61.207ZM76.4414 9.50391V15.8672C76.2539 16.1172 75.9688 16.4297 75.5859 16.8047C75.2109 17.1797 74.6836 17.5117 74.0039 17.8008C73.3242 18.0898 72.4336 18.2344 71.332 18.2344C70.4492 18.2344 69.6406 18.0859 68.9062 17.7891C68.1797 17.4922 67.5508 17.0469 67.0195 16.4531C66.4961 15.8516 66.0898 15.1055 65.8008 14.2148C65.5117 13.3164 65.3672 12.2656 65.3672 11.0625V7.86328C65.3672 6.66797 65.4883 5.62109 65.7305 4.72266C65.9727 3.82422 66.332 3.07813 66.8086 2.48438C67.293 1.89062 67.8906 1.44531 68.6016 1.14844C69.3203 0.851563 70.1562 0.703125 71.1094 0.703125C72.2109 0.703125 73.1484 0.910156 73.9219 1.32422C74.6953 1.73828 75.293 2.33594 75.7148 3.11719C76.1445 3.89844 76.3867 4.83594 76.4414 5.92969H74.2852C74.2305 5.22656 74.082 4.625 73.8398 4.125C73.5977 3.61719 73.2539 3.23047 72.8086 2.96484C72.3633 2.69141 71.7969 2.55469 71.1094 2.55469C70.4531 2.55469 69.8984 2.66406 69.4453 2.88281C68.9922 3.10156 68.6211 3.42969 68.332 3.86719C68.0508 4.30469 67.8438 4.85547 67.7109 5.51953C67.5859 6.18359 67.5234 6.95703 67.5234 7.83984V11.0625C67.5234 11.9688 67.6133 12.7578 67.793 13.4297C67.9727 14.1016 68.2266 14.6562 68.5547 15.0938C68.8906 15.5312 69.293 15.8594 69.7617 16.0781C70.2305 16.2891 70.7578 16.3945 71.3438 16.3945C72.0078 16.3945 72.5312 16.3242 72.9141 16.1836C73.2969 16.043 73.5898 15.8828 73.793 15.7031C74.0039 15.5234 74.1719 15.3789 74.2969 15.2695V11.332H71.168V9.50391H76.4414ZM80.8945 0.9375L84.375 9.50391L87.8672 0.9375H90.3047L85.4531 11.625V18H83.2969V11.625L78.4453 0.9375H80.8945ZM93.2227 0.9375H95.3086L99.7734 14.8477L104.227 0.9375H106.312L100.582 18H98.9414L93.2227 0.9375ZM92.543 0.9375H94.3711L94.6875 11.3438V18H92.543V0.9375ZM105.152 0.9375H106.98V18H104.836V11.3438L105.152 0.9375Z" fill="white"/>
+</g></symbol><symbol id="logo-vk" viewBox="0 0 25 25"><g fill="none">
+<path d="M13.4727 15.3301C13.9154 15.187 14.4822 16.2747 15.0855 16.691C15.5384 17.0063 15.8852 16.9383 15.8852 16.9383L17.4934 16.9151C17.4934 16.9151 18.3338 16.8632 17.9365 16.1955C17.9036 16.14 17.7036 15.7005 16.7395 14.7962C15.7315 13.8502 15.8681 14.0034 17.0817 12.3679C17.8212 11.371 18.1171 10.7621 18.0245 10.5028C17.9356 10.2532 17.3924 10.318 17.3924 10.318L15.5805 10.3305C15.4041 10.331 15.2545 10.3856 15.1865 10.569C15.1851 10.5708 14.8989 11.3404 14.5174 11.9947C13.7112 13.3788 13.3894 13.4524 13.256 13.3658C12.9499 13.1653 13.0273 12.5615 13.0273 12.1322C13.0273 10.7908 13.2273 10.2314 12.6355 10.0869C12.4378 10.0388 12.2933 10.0073 11.7891 10.0027C11.1445 9.99295 10.5972 10.0027 10.2869 10.155C10.0809 10.2583 9.92296 10.4847 10.0188 10.4977C10.1392 10.5139 10.4092 10.5718 10.5536 10.769C10.7393 11.0246 10.7338 11.5974 10.7338 11.5974C10.7338 11.5974 10.8398 13.1769 10.4837 13.3728C10.2392 13.507 9.9049 13.2329 9.18578 11.9762C8.81858 11.3335 8.54121 10.6232 8.54121 10.6232C8.54121 10.6232 8.4875 10.4912 8.39026 10.419C8.27449 10.3333 8.11243 10.306 8.11243 10.306L6.39265 10.3171C6.39265 10.3171 6.13427 10.3245 6.03935 10.4384C5.95507 10.5393 6.0324 10.7477 6.0324 10.7477C6.0324 10.7477 7.37942 13.934 8.90471 15.5389C10.3031 17.0123 11.8923 16.9146 11.8923 16.9146H12.6124C12.6124 16.9146 12.8295 16.8896 12.9407 16.7702C13.0444 16.659 13.0398 16.4502 13.0398 16.4502C13.0398 16.4502 13.0254 15.4736 13.4727 15.3301Z" fill="currentColor"/>
+</g></symbol><symbol id="logo" viewBox="0 0 119 20"><g fill="none">
+<path d="M9.31836 14.1377C9.31836 13.8076 9.28874 13.5072 9.22949 13.2363C9.17025 12.9655 9.04329 12.7158 8.84863 12.4873C8.66243 12.2588 8.38737 12.0303 8.02344 11.8018C7.66797 11.5732 7.20247 11.3363 6.62695 11.0908C5.94141 10.8031 5.27702 10.4984 4.63379 10.1768C3.99056 9.84668 3.41081 9.46582 2.89453 9.03418C2.37826 8.60254 1.96777 8.09473 1.66309 7.51074C1.36686 6.91829 1.21875 6.22428 1.21875 5.42871C1.21875 4.65007 1.3584 3.94336 1.6377 3.30859C1.92546 2.67383 2.33171 2.13216 2.85645 1.68359C3.38118 1.22656 3.99479 0.875326 4.69727 0.629883C5.4082 0.38444 6.19954 0.261719 7.07129 0.261719C8.25618 0.261719 9.28027 0.507161 10.1436 0.998047C11.0153 1.48893 11.6882 2.16178 12.1621 3.0166C12.6445 3.87142 12.8857 4.85319 12.8857 5.96191H9.17871C9.17871 5.43717 9.10254 4.97591 8.9502 4.57812C8.80632 4.17188 8.57357 3.85449 8.25195 3.62598C7.93034 3.39746 7.51562 3.2832 7.00781 3.2832C6.53385 3.2832 6.1403 3.38053 5.82715 3.5752C5.52246 3.76139 5.29395 4.01953 5.1416 4.34961C4.99772 4.67122 4.92578 5.03516 4.92578 5.44141C4.92578 5.74609 4.99772 6.02116 5.1416 6.2666C5.29395 6.50358 5.5013 6.7194 5.76367 6.91406C6.02604 7.10026 6.33496 7.28223 6.69043 7.45996C7.05436 7.6377 7.45215 7.8112 7.88379 7.98047C8.72168 8.31055 9.46224 8.67448 10.1055 9.07227C10.7487 9.46159 11.2861 9.90169 11.7178 10.3926C12.1494 10.875 12.4753 11.4209 12.6953 12.0303C12.9154 12.6396 13.0254 13.3337 13.0254 14.1123C13.0254 14.8825 12.89 15.585 12.6191 16.2197C12.3568 16.846 11.9717 17.3877 11.4639 17.8447C10.9561 18.2933 10.3424 18.6403 9.62305 18.8857C8.91211 19.1312 8.11654 19.2539 7.23633 19.2539C6.38151 19.2539 5.57324 19.1354 4.81152 18.8984C4.0498 18.653 3.37695 18.2848 2.79297 17.7939C2.21745 17.2946 1.76465 16.6641 1.43457 15.9023C1.10449 15.1322 0.939453 14.2223 0.939453 13.1729H4.65918C4.65918 13.7314 4.71419 14.2096 4.82422 14.6074C4.93424 14.9967 5.10352 15.3099 5.33203 15.5469C5.56055 15.7754 5.83984 15.9489 6.16992 16.0674C6.50846 16.1774 6.89355 16.2324 7.3252 16.2324C7.81608 16.2324 8.2054 16.1393 8.49316 15.9531C8.78939 15.7669 9.00098 15.5173 9.12793 15.2041C9.25488 14.891 9.31836 14.5355 9.31836 14.1377ZM23.8418 0.515625H27.5488V13.2109C27.5488 14.6328 27.2865 15.7923 26.7617 16.6895C26.2454 17.5781 25.5303 18.2298 24.6162 18.6445C23.7021 19.0508 22.6569 19.2539 21.4805 19.2539C20.2956 19.2539 19.2419 19.0508 18.3193 18.6445C17.3968 18.2298 16.6774 17.5781 16.1611 16.6895C15.6533 15.7923 15.3994 14.6328 15.3994 13.2109V0.515625H19.1064V13.2109C19.1064 14.015 19.1953 14.6328 19.373 15.0645C19.5592 15.4961 19.8258 15.7923 20.1729 15.9531C20.5283 16.1055 20.9642 16.1816 21.4805 16.1816C22.0052 16.1816 22.4368 16.1055 22.7754 15.9531C23.1224 15.7923 23.3848 15.4961 23.5625 15.0645C23.7487 14.6328 23.8418 14.015 23.8418 13.2109V0.515625ZM36.6895 12.4873H32.9062V9.40234H36.6895C37.2142 9.40234 37.6416 9.28385 37.9717 9.04688C38.3102 8.8099 38.5557 8.48405 38.708 8.06934C38.8604 7.64616 38.9365 7.1722 38.9365 6.64746C38.9365 6.11426 38.8561 5.61914 38.6953 5.16211C38.543 4.69661 38.3018 4.31999 37.9717 4.03223C37.6501 3.74447 37.2227 3.60059 36.6895 3.60059H34.0996V19H30.3926V0.515625H36.6895C37.9336 0.515625 39.0042 0.777995 39.9014 1.30273C40.7985 1.82747 41.484 2.55111 41.958 3.47363C42.4404 4.3877 42.6816 5.43717 42.6816 6.62207C42.6816 7.81543 42.4404 8.85221 41.958 9.73242C41.484 10.6042 40.7985 11.2812 39.9014 11.7637C39.0042 12.2461 37.9336 12.4873 36.6895 12.4873ZM55.7705 15.9277V19H47.7344V15.9277H55.7705ZM48.8896 0.515625V19H45.1699V0.515625H48.8896ZM54.6914 8.00586V10.9893H47.7344V8.00586H54.6914ZM55.7451 0.515625V3.60059H47.7344V0.515625H55.7451ZM57.9541 0.515625H63.8828C65.1185 0.515625 66.1722 0.727214 67.0439 1.15039C67.9157 1.57357 68.5843 2.19987 69.0498 3.0293C69.5153 3.85872 69.748 4.88281 69.748 6.10156C69.748 7.10026 69.6126 7.95508 69.3418 8.66602C69.071 9.36849 68.6859 9.95671 68.1865 10.4307C67.6872 10.8962 67.0905 11.2686 66.3965 11.5479L65.2666 12.2207H60.4551L60.4424 9.13574H63.7812C64.2891 9.13574 64.708 9.02572 65.0381 8.80566C65.3766 8.57715 65.6263 8.25977 65.7871 7.85352C65.9564 7.4388 66.041 6.95638 66.041 6.40625C66.041 5.82227 65.9648 5.32292 65.8125 4.9082C65.6686 4.48503 65.4359 4.16341 65.1143 3.94336C64.8011 3.71484 64.3906 3.60059 63.8828 3.60059H61.6738V19H57.9541V0.515625ZM66.3457 19L62.9561 10.7607L66.8535 10.748L70.3193 18.8223V19H66.3457ZM84.8936 9.28809V16.9053C84.6312 17.1846 84.2461 17.5104 83.7383 17.8828C83.2389 18.2467 82.583 18.5684 81.7705 18.8477C80.9665 19.1185 79.9847 19.2539 78.8252 19.2539C77.8011 19.2539 76.8701 19.0931 76.0322 18.7715C75.2028 18.4499 74.4876 17.9632 73.8867 17.3115C73.2943 16.6514 72.8415 15.8304 72.5283 14.8486C72.2152 13.8584 72.0586 12.6862 72.0586 11.332V8.18359C72.0586 6.84635 72.2067 5.68262 72.5029 4.69238C72.8076 3.69368 73.2477 2.86426 73.8232 2.2041C74.3988 1.54395 75.0843 1.05306 75.8799 0.731445C76.6839 0.409831 77.5895 0.249023 78.5967 0.249023C79.9847 0.249023 81.123 0.481771 82.0117 0.947266C82.9089 1.41276 83.5859 2.10254 84.043 3.0166C84.5085 3.93066 84.7878 5.05208 84.8809 6.38086H81.2881C81.2288 5.60221 81.0977 4.99284 80.8945 4.55273C80.6999 4.11263 80.4248 3.79948 80.0693 3.61328C79.7139 3.41862 79.2526 3.32129 78.6855 3.32129C78.1947 3.32129 77.7673 3.41016 77.4033 3.58789C77.0394 3.75716 76.7347 4.03646 76.4893 4.42578C76.2438 4.8151 76.0618 5.31445 75.9434 5.92383C75.8249 6.5332 75.7656 7.27799 75.7656 8.1582V11.332C75.7656 12.2038 75.8333 12.9486 75.9688 13.5664C76.1042 14.1842 76.3031 14.6878 76.5654 15.0771C76.8363 15.4665 77.1748 15.75 77.5811 15.9277C77.9958 16.097 78.4824 16.1816 79.041 16.1816C79.4896 16.1816 79.8493 16.1351 80.1201 16.042C80.391 15.9489 80.6068 15.8516 80.7676 15.75C80.9368 15.64 81.0765 15.5553 81.1865 15.4961V12.0938H78.5332V9.28809H84.8936ZM90.3145 0.515625L93.1328 8.84375L95.9258 0.515625H99.9756L94.999 12.2842V19H91.2539V12.2842L86.2773 0.515625H90.3145ZM103.01 0.515625H106.272L110.043 13.1602L113.801 0.515625H116.683L111.427 19H108.646L103.01 0.515625ZM101.689 0.515625H104.8L105.282 12.7031V19H101.689V0.515625ZM115.261 0.515625H118.384V19H114.804V12.7031L115.261 0.515625Z" fill="white"/>
+</g></symbol></svg>
+    </div>
+    <div class="wrapper">
+      <style>
+        .uikit {
+  padding: 50px 0;
+  scroll-behavior: smooth;
+}
+@media (max-width: 1023px) {
+  .uikit {
+    padding: 50px 0 100px;
+  }
+}
+.uikit__header-link {
+  display: inline-flex;
+  padding: 10px;
+  background-color: #102654;
+  transition: opacity ease 0.3s;
+}
+.uikit__header-link:hover {
+  opacity: 0.8;
+}
+.uikit__text {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 10px 0;
+}
+.uikit__text--class {
+  font-family: monospace, monospace;
+  font-size: 16px;
+  line-height: 22px;
+}
+.uikit__title--h1 {
+  font-size: 30px;
+  line-height: 36px;
+  margin: 30px 0 30px;
+}
+@media (max-width: 767px) {
+  .uikit__title--h1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+.uikit__title--h2 {
+  font-size: 20px;
+  line-height: 26px;
+  position: relative;
+  margin: 0;
+  padding: 5px 0;
+}
+.uikit section > .uikit__title--h2 {
+  margin: 0 0 15px 0;
+  padding: 50px 0 0 0;
+}
+@media (max-width: 767px) {
+  .uikit section > .uikit__title--h2 {
+    padding: 30px 0 0;
+  }
+}
+.uikit__component {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .uikit__component {
+    padding: 20px 0;
+  }
+}
+.uikit__component::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: calc(100% - 40px);
+  content: "";
+  transform: translateY(-50%);
+  background-color: #316DC2;
+}
+@media (max-width: 767px) {
+  .uikit__component::before {
+    left: -10px;
+  }
+}
+.uikit__component pre {
+  width: 100%;
+  margin: 15px 0 0 0;
+}
+.uikit__sections {
+  position: fixed;
+  z-index: 5000;
+  right: 0;
+  top: 0;
+  overflow-y: scroll;
+  width: min-content;
+  max-width: 30%;
+  max-height: calc(100vh - 50px);
+  padding: 15px;
+  counter-reset: sections;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  background-color: #316DC2;
+}
+@media (max-width: 1023px) {
+  .uikit__sections {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.uikit__sections::-webkit-scrollbar {
+  display: none;
+}
+.uikit__sections label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  color: inherit;
+}
+@media (max-width: 1023px) {
+  .uikit__sections label {
+    justify-content: center;
+  }
+}
+@media (hover: hover) {
+  .uikit__sections label:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+}
+.uikit__sections label.focus-visible:focus {
+  opacity: 0.6;
+}
+.uikit__sections label::after {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 20px;
+  content: "";
+  transform: rotate(45deg);
+  border: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+}
+.uikit__sections div {
+  display: grid;
+  padding: 0;
+  transition: grid-template-rows 0.3s ease, padding 0.3s ease;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0fr;
+}
+.uikit__sections input:checked + div {
+  padding: 10px 0 0 0;
+  grid-template-rows: 1fr;
+}
+.uikit__sections ul {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.uikit__sections li::before {
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 5px 0 0;
+  content: counter(sections) ". ";
+  counter-increment: sections;
+}
+.uikit__sections a {
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  color: inherit;
+}
+.uikit__sections a::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  background-color: #000;
+}
+@media (hover: hover) {
+  .uikit__sections a:hover:not(.focus-visible)::before {
+    opacity: 0.8;
+  }
+}
+.uikit__sections a.focus-visible:focus::before {
+  opacity: 0.8;
+}
+.bg-gradient {
+  min-width: 30%;
+  padding: 15px;
+  background: conic-gradient(from 151deg at 16.03% 39.06%, #003d85 32.23deg, #b80027 313.3deg, #003d85);
+}
+.bg-grey {
+  width: 30%;
+  padding: 15px;
+  background-color: #d0d0d0;
+}
+.bg-dark {
+  padding: 15px;
+  background-color: #030a1a;
+}
+        /* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+pug */
+code[class*=language-],pre[class*=language-]{color:#000;background:0 0;text-shadow:0 1px #fff;font-family:Consolas,Monaco,'Andale Mono','Ubuntu Mono',monospace;font-size:16px;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.token.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#9a6e3a;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.class-name,.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}
+
+      </style>
+      <main>
+        <div class="uikit">
+          <div class="uikit__sections">
+            <label for="section-burger"><span>Разделы&nbsp;компонентов</span></label>
+            <input class="visually-hidden" type="checkbox" id="section-burger">
+            <div>
+              <ul>
+                <li><a href="#title">Заголовки</a></li>
+                <li><a href="#text">Текст</a></li>
+                <li><a href="#logo">Логотип</a></li>
+                <li><a href="#buttons">Кнопки</a></li>
+                <li><a href="#btn-icon">Кнопки с иконкой</a></li>
+                <li><a href="#btn-play">Кнопка воспроизведения</a></li>
+                <li><a href="#links">Ссылки</a></li>
+                <li><a href="#socials">Соц. сети</a></li>
+                <li><a href="#forms">Элементы форм</a></li>
+                <li><a href="#form">Форма</a></li>
+                <li><a href="#review">Карточка отзыва</a></li>
+                <li><a href="#video">Видео</a></li>
+                <li><a href="#card-subscription">Карточка абонемента</a></li>
+                <li><a href="#card-coaches">Карточка тренера</a></li>
+                <li><a href="#card-advantages">Карточка преимущества</a></li>
+                <li><a href="#card-advantages-main">Карточка преимущества 2</a></li>
+                <li><a href="#card-stock">Карточка акции</a></li>
+                <li><a href="#banner-stock">Баннер акции</a></li>
+                <li><a href="#tabs">Табы</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="container"><a class="uikit__header-link" href="sitemap.html">
+              <svg width="120" height="23" aria-hidden="true">
+                <use xlink:href="#logo"></use>
+              </svg></a>
+            <h1 class="uikit__title uikit__title--h1">Компоненты, используемые на проекте</h1>
+            <section>
+              <h2 class="uikit__title uikit__title--h2">Название компонента или группы компонентов</h2>
+              <p class="uikit__text">Информация о компоненте (подсказки \ предупреждение \ важная информация)</p>
+              <div class="uikit__component">
+                <p class="uikit__text"> Класс компонента \ модификаторы</p>
+                <pre><code class="language-pug">p Пример кода
+
+</code></pre>
+              </div>
+            </section>
+            <section id="title">
+              <h2 class="uikit__title uikit__title--h2">Заголовки</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.title \ .title--h1</p>
+                <h1 class="title title--h1">Заголовок
+                </h1>
+                <pre><code class="language-pug">+title({tag: "h1", mods: ["h1"], text: "Заголовок"})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.title \ .title--h2</p>
+                <h2 class="title title--h2">Заголовок
+                </h2>
+                <pre><code class="language-pug">+title({tag: "h2", mods: ["h2"], text: "Заголовок"})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.title \ .title--h3</p>
+                <h3 class="title title--h3">Заголовок
+                </h3>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.title \ .title--h4</p>
+                <h4 class="title title--h4">Заголовок
+                </h4>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.title \ .title--h5</p>
+                <h5 class="title title--h5">Заголовок
+                </h5>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.title \ .title--h6</p>
+                <h6 class="title title--h6">Заголовок
+                </h6>
+              </div>
+            </section>
+            <section id="text">
+              <h2 class="uikit__title uikit__title--h2">Текст</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.text \ .text--large</p>
+                <p class="text text--large">Крупный текст</p>
+                <pre><code class="language-pug">+text("Крупный текст", "large")</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.text \ .text--medium</p>
+                <p class="text text--medium">Стандартный текст</p>
+                <pre><code class="language-pug">+text("Крупный текст")</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.text \ .text--small</p>
+                <p class="text text--small">Мелкий текст</p>
+                <pre><code class="language-pug">+text("Крупный текст", "small")
+</code></pre>
+              </div>
+            </section>
+            <section id="logo">
+              <h2 class="uikit__title uikit__title--h2">Логотип</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.logo (default)</p>
+                <div class="bg-gradient"><a class="logo" href="index.html" aria-label="Перейти на Главную"><img src="img/svg/logo.svg" width="120" height="23" alt="Логотип Фитнес"></a>
+                </div>
+                <pre><code class="language-pug">+logo()
+
+</code></pre>
+              </div>
+            </section>
+            <section id="buttons">
+              <h2 class="uikit__title uikit__title--h2">Кнопки</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn \ default \ button</p>
+                <div class="bg-gradient">
+                  <button class="btn" type="button">Кнопка
+                  </button>
+                </div>
+                <pre><code class="language-pug">+btn({text: "Текст"})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn \ disabled \ button</p>
+                <div class="bg-gradient">
+                  <button class="btn" type="button" disabled>Текст
+                  </button>
+                </div>
+                <pre><code class="language-pug">+btn({text: "Текст"})(disabled)</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn \ .btn--dark \ button</p>
+                <button class="btn btn--dark" type="button"><span class="btn__text">Текст</span>
+                </button>
+                <pre><code class="language-pug">+btn({text: "Текст", textSpan: true, mods: ["dark"]})
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn \ .btn--dark disabled \ button</p>
+                <button class="btn btn--dark" type="button" disabled><span class="btn__text">Текст</span>
+                </button>
+                <pre><code class="language-pug">+btn({text: "Текст", textSpan: true, mods: ["dark"]})(disabled)
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn \ .btn--tab \ button</p>
+                <button class="btn btn--tab" type="button">Текст
+                </button>
+                <pre><code class="language-pug">+btn({text: "Текст", mods: ["tab"]})
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn \ .btn--tab disabled \ button</p>
+                <button class="btn btn--tab" type="button" disabled>Текст
+                </button>
+                <pre><code class="language-pug">+btn({text: "Текст", mods: ["tab"]})(disabled)
+</code></pre>
+              </div>
+            </section>
+            <section id="btn-icon">
+              <h2 class="uikit__title uikit__title--h2">Кнопки с иконкой</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn-icon \ default \ button</p>
+                <button class="btn-icon" type="button" aria-label="Кнопка"><span class="btn-icon__wrapper">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-arrow"></use>
+                    </svg></span>
+                </button>
+                <pre><code class="language-pug">+btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn-icon \ .btn-icon--rotate \ button</p>
+                <button class="btn-icon btn-icon--rotate" type="button" aria-label="Кнопка"><span class="btn-icon__wrapper">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-arrow"></use>
+                    </svg></span>
+                </button>
+                <pre><code class="language-pug">+btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32", mods: ["rotate"]})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn-icon \ disabled \ button</p>
+                <button class="btn-icon" type="button" aria-label="Кнопка" disabled><span class="btn-icon__wrapper">
+                    <svg width="32" height="32" aria-hidden="true">
+                      <use xlink:href="#icon-arrow"></use>
+                    </svg></span>
+                </button>
+                <pre><code class="language-pug">+btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"})(disabled)
+</code></pre>
+              </div>
+            </section>
+            <section id="btn-play">
+              <h2 class="uikit__title uikit__title--h2">Кнопка воспроизведения</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn-play \ default \ button</p>
+                <div class="bg-grey">
+                  <button class="btn-play" type="button" aria-label="Кнопка"><span class="btn-play__wrapper"></span><span class="btn-play__icon">
+                      <svg width="17" height="17" aria-hidden="true">
+                        <use xlink:href="#icon-play"></use>
+                      </svg></span></button>
+                </div>
+                <pre><code class="language-pug">+btn-play({label: "Кнопка", icon: "icon-arrow", width: "16", height: "32"})
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.btn-play \ disabled \ button</p>
+                <button class="btn-play" type="button" aria-label="Кнопка" disabled><span class="btn-play__wrapper"></span><span class="btn-play__icon">
+                    <svg width="17" height="17" aria-hidden="true">
+                      <use xlink:href="#icon-play"></use>
+                    </svg></span></button>
+                <pre><code class="language-pug">+btn-play({label: "Кнопка"})(disabled)
+
+</code></pre>
+              </div>
+            </section>
+            <section id="links">
+              <h2 class="uikit__title uikit__title--h2">Ссылки</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ default \ link</p>
+                <div class="bg-gradient">
+                  <a class="link" href="#/">Ссылка
+                  </a>
+                </div>
+                <pre><code class="language-pug">+link({text: "Ссылка", href: "#/"})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ disabled \ link</p>
+                <div class="bg-gradient">
+                  <span class="link is-disabled">Ссылка
+                  </span>
+                </div>
+                <pre><code class="language-pug">+link({text: "Ссылка"}).is-disabled</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ .link--dark \ link</p>
+                <a class="link link--dark" href="#/">Ссылка
+                </a>
+                <pre><code class="language-pug">+link({text: "Ссылка", href: "#/", mods: ["dark"]})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ .link--dark .is-disabled</p>
+                <span class="link link--dark is-disabled">Ссылка
+                </span>
+                <pre><code class="language-pug">+link({text: "Ссылка", mods: ["dark"]}).is-disabled</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ .link--main-phone</p>
+                <div class="bg-gradient">
+                  <a class="link link--main-phone" href="tel:78005555555">8-800-555-55-55
+                  </a>
+                </div>
+                <pre><code class="language-pug">+link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ .link--main-phone \ .is-disabled</p>
+                <div class="bg-gradient">
+                  <a class="link link--main-phone is-disabled" href="tel:78005555555">8-800-555-55-55
+                  </a>
+                </div>
+                <pre><code class="language-pug">+link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]}).is-disabled
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ .link--light-thin</p>
+                <div class="bg-gradient">
+                  <a class="link link--light-thin" href="#">Ссылка
+                  </a>
+                </div>
+                <pre><code class="language-pug">+link({href: "#", text: "Ссылка", mods: ["light-thin"]})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.link \ .link--light-thin \ .is-disabled</p>
+                <div class="bg-gradient">
+                  <a class="link link--light-thin is-disabled" href="#">Ссылка
+                  </a>
+                </div>
+                <pre><code class="language-pug">+link({href: "#", text: "Ссылка", mods: ["light-thin"]}).is-disabled
+
+</code></pre>
+              </div>
+            </section>
+            <section id="socials">
+              <h2 class="uikit__title uikit__title--h2">Соц. сети</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.socials \ default \ link</p>
+                <div class="bg-dark">
+                  <div class="socials">
+                    <ul class="socials__list">
+                      <li class="socials__item"><a class="socials__link" href="#/" aria-label="В Контакте" target="_blank" rel="nofollow noopener noreferrer">
+                          <svg width="25" height="25" aria-hidden="true">
+                            <use xlink:href="#logo-vk"></use>
+                          </svg></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#/" aria-label="Одноклассники" target="_blank" rel="nofollow noopener noreferrer">
+                          <svg width="25" height="25" aria-hidden="true">
+                            <use xlink:href="#logo-ok"></use>
+                          </svg></a></li>
+                      <li class="socials__item"><a class="socials__link" href="#/" aria-label="Reddit" target="_blank" rel="nofollow noopener noreferrer">
+                          <svg width="25" height="25" aria-hidden="true">
+                            <use xlink:href="#logo-reddit"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+socials([
+  {iconName: "logo-vk", href: "#/", label: "В Контакте"},
+  {iconName: "logo-ok",href: "#/", label: "Одноклассники"},
+  {iconName: "logo-reddit", href: "#/", label: "Reddit"}
+])
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.socials \ disabled \ link</p>
+                <div class="bg-dark">
+                  <div class="socials">
+                    <ul class="socials__list">
+                      <li class="socials__item"><a class="socials__link is-disabled" href="#/" aria-label="В Контакте" target="_blank" rel="nofollow noopener noreferrer">
+                          <svg width="25" height="25" aria-hidden="true">
+                            <use xlink:href="#logo-vk"></use>
+                          </svg></a></li>
+                      <li class="socials__item"><a class="socials__link is-disabled" href="#/" aria-label="Одноклассники" target="_blank" rel="nofollow noopener noreferrer">
+                          <svg width="25" height="25" aria-hidden="true">
+                            <use xlink:href="#logo-ok"></use>
+                          </svg></a></li>
+                      <li class="socials__item"><a class="socials__link is-disabled" href="#/" aria-label="Reddit" target="_blank" rel="nofollow noopener noreferrer">
+                          <svg width="25" height="25" aria-hidden="true">
+                            <use xlink:href="#logo-reddit"></use>
+                          </svg></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+socials([
+  {iconName: "logo-vk", href: "#/", label: "В Контакте", mod: "is-disabled"},
+  {iconName: "logo-ok",href: "#/", label: "Одноклассники", mod: "is-disabled"},
+  {iconName: "logo-reddit", href: "#/", label: "Reddit", mod: "is-disabled"}
+])
+
+</code></pre>
+              </div>
+            </section>
+            <section id="forms">
+              <h2 class="uikit__title uikit__title--h2">Элементы форм</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.custom-input \ type="text"</p>
+                <div class="bg-gradient">
+                  <div class="custom-input">
+                    <label class="visually-hidden"></label>
+                    <input type="text" name="user-name" placeholder="Имя">
+                  </div>
+                </div>
+                <pre><code class="language-pug">+custom-input({
+  inputPlaceholder: "Имя",
+  inputName: "user-name",
+})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.custom-input \ type="tel"</p>
+                <div class="bg-gradient">
+                  <div class="custom-input">
+                    <label class="visually-hidden"></label>
+                    <input type="tel" name="user-phone" placeholder="Телефон">
+                  </div>
+                </div>
+                <pre><code class="language-pug">+custom-input({
+  inputType: "tel",
+  inputPlaceholder: "Телефон",
+  inputName: "user-phone",
+})</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.custom-input \ type="email"</p>
+                <div class="bg-gradient">
+                  <div class="custom-input">
+                    <label class="visually-hidden"></label>
+                    <input type="email" name="user-mail" placeholder="E-mail">
+                  </div>
+                </div>
+                <pre><code class="language-pug">+custom-input({
+  inputType: "email",
+  inputPlaceholder: "E-mail",
+  inputName: "user-mail",
+})
+</code></pre>
+              </div>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">+custom-toggle \ default</p>
+                <div class="custom-toggle custom-toggle--checkbox">
+                  <label>
+                    <input type="checkbox" value="user-agreement-1" name="user-agreement"><span class="custom-toggle__icon"></span><span class="custom-toggle__label">Чекбокс</span>
+                  </label>
+                </div>
+                <pre><code class="language-pug">+custom-toggle({
+  inputLabel: "Чекбокс",
+  inputName: "user-agreement",
+  inputValue: "user-agreement-1",
+  inputChecked: false
+}).custom-toggle--checkbox
+
+</code></pre>
+              </div>
+            </section>
+            <section id="form">
+              <h2 class="uikit__title uikit__title--h2">Форма</h2>
+              <div class="uikit__component">
+                <div class="bg-gradient">
+                  <div style="width: 410px">
+                    <div class="form" data-form-validate data-callback="base">
+                      <h2 class="title title--h3 form__title">Бесплатное занятие
+                      </h2>
+                      <form method="post" action="https://echo.htmlacademy.ru">
+                        <div class="form__input-box">
+                          <div class="custom-input custom-input--narrow" data-validate-type="text" data-message-base="Поле обязательно к заполнению" data-required>
+                            <label class="visually-hidden"></label>
+                            <input type="text" name="user-name" placeholder="Имя">
+                          </div>
+                          <div class="custom-input custom-input--narrow" data-validate-type="phone" data-on-input-validate data-message-base="Поле обязательно к заполнению" data-message-extra="Некорректный номер" data-required>
+                            <label class="visually-hidden"></label>
+                            <input type="tel" name="user-phone" placeholder="Телефон">
+                          </div>
+                        </div>
+                        <button class="btn btn--sparse-text form__button" type="submit">Отправить
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+form()
+
+</code></pre>
+              </div>
+            </section>
+            <section id="review">
+              <h2 class="uikit__title uikit__title--h2">Карточка отзыва</h2>
+              <div class="uikit__component">
+                <div class="card-review">
+                  <div class="card-review__inner">
+                    <div class="card-review__photo-box">
+                      <div class="card-review__photo-wrapper">
+                        <picture>
+                          <source type="image/webp" srcset="img/content/reviewer-1.webp, img/content/reviewer-1@2x.webp 2x"><img src="img/content/reviewer-1.jpg" srcset="img/content/reviewer-1@2x.jpg 2x" width="80" height="80" alt="Анна Орлова">
+                        </picture>
+                      </div>
+                    </div>
+                    <div class="card-review__content">
+                      <h3 class="title title--h6 card-review__name-box">Анна Орлова
+                      </h3>
+                      <div class="card-review__text text text--medium">
+                        <p>«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+card-review({
+  imgSource: "content",
+  imgName: "reviewer-1",
+  imgType: "jpg",
+  reviewer: "Анна Орлова",
+  text: "«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»",
+})
+
+</code></pre>
+              </div>
+            </section>
+            <section id="video">
+              <h2 class="uikit__title uikit__title--h2">Видео</h2>
+              <div class="uikit__component">
+                <div class="video" data-src="https://www.youtube.com/embed/9TZXsZItgdw">
+                  <div class="video__screen">
+                    <div class="video__button-box">
+                      <button class="btn-play" type="button" aria-label="Кнопка"><span class="btn-play__wrapper"></span><span class="btn-play__icon">
+                          <svg width="17" height="17" aria-hidden="true">
+                            <use xlink:href="#icon-play"></use>
+                          </svg></span></button>
+                    </div>
+                    <div class="video__overlay"></div>
+                    <picture>
+                      <source type="image/webp" srcset="img/content/video.webp, img/content/video@2x.webp 2x"><img src="img/content/video.jpg" srcset="img/content/video@2x.jpg 2x" width="364" height="228" alt="">
+                    </picture>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+video("https://www.youtube.com/embed/9TZXsZItgdw")
+
+</code></pre>
+              </div>
+            </section>
+            <section id="card-subscription">
+              <h2 class="uikit__title uikit__title--h2">Карточка абонемента</h2>
+              <div class="uikit__component" style="background-color: #F8F9FC;">
+                <p class="uikit__text uikit__text--class">.card-subscription \ default</p>
+                <div style="max-width: 360px; width: 100%;">
+                  <div class="card-subscription">
+                    <p class="title title--h4">С тренером
+                    </p>
+                    <p class="text text--medium">12 занятий</p>
+                    <div class="card-subscription__price-wrapper">
+                      <div class="card-subscription__shadow">5000</div>
+                      <div class="card-subscription__price">5000<span class="card-subscription__ruble">
+                          <svg width="30" height="42" aria-hidden="true">
+                            <use xlink:href="#icon-ruble"></use>
+                          </svg></span></div>
+                    </div>
+                    <a class="btn btn--dark card-subscription__btn" href="#/"><span class="btn__text">Купить абонемент</span>
+                    </a>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+card-subscription({
+  title: "С тренером",
+  info: "12 занятий",
+  price: "5000",
+})
+</code></pre>
+              </div>
+            </section>
+            <section id="card-coaches">
+              <h2 class="uikit__title uikit__title--h2">Карточка тренера</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.card-coaches</p>
+                <div style="max-width: 260px; width: 100%;">
+                  <div class="card-coaches">
+                    <div class="card-coaches__content" tabindex="0">
+                      <div class="card-coaches__content-inner">
+                        <p class="title title--h6 card-coaches__name">Анна Павлова
+                        </p>
+                        <p class="text text--medium card-coaches__direction">CrossFit</p>
+                        <ul class="card-coaches__list">
+                          <li class="text text--small card-coaches__item">Certified Level 3 Trainer</li>
+                          <li class="text text--small card-coaches__item">Победитель чемпионата России по CrossFit</li>
+                          <li class="text text--small card-coaches__item">Опыт — 6 лет</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="card-coaches__photo">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/coaches/photo-1.webp, img/content/coaches/photo-1@2x.webp 2x"><img src="img/content/coaches/photo-1.jpg" srcset="img/content/coaches/photo-1@2x.jpg 2x" width="260" height="164" alt="Тренер">
+                      </picture>
+                      <p class="title title--h6 card-coaches__name-intro">Анна Павлова
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+card-coaches({
+  name: "Анна Павлова",
+  direction: "CrossFit",
+  infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+  image: {
+    path: "content/coaches",
+    img: "photo-1",
+    format: "jpg",
+    width: "260",
+    height: "164",
+    alt: "Тренер",
+  },
+})
+</code></pre>
+              </div>
+            </section>
+            <section id="card-advantages">
+              <h2 class="uikit__title uikit__title--h2">Карточка преимущества</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.card-advantages</p>
+                <div style="max-width: 260px; width: 100%;">
+                  <div class="card-advantages">
+                    <div class="card-advantages__number-wrapper"><span class="card-advantages__number">900</span><span class="card-advantages__units">кв/м</span></div>
+                    <div class="card-advantages__text-wrapper">
+                      <p class="title title--h6 card-advantages__title">Площадь
+                      </p>
+                      <p class="text text--medium card-advantages__text">Занимайтесь без очередей и толкучки</p>
+                    </div>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+card-advantages({
+  title: "Площадь",
+  text: "Занимайтесь без очередей и толкучки",
+  number: "900",
+  units: "кв/м",
+})
+</code></pre>
+              </div>
+            </section>
+            <section id="card-advantages-main">
+              <h2 class="uikit__title uikit__title--h2">Карточка преимущества 2</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.card-advantages-main</p>
+                <div style="max-width: 240px; width: 100%;">
+                  <div class="card-advantages-main">
+                    <p class="card-advantages-main__number">100</p>
+                    <p class="title title--h4 card-advantages-main__title">Тренажеров
+                    </p>
+                    <p class="text text--medium card-advantages-main__text">Современные тренажеры на все группы мышц</p>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+card-advantages-main({
+  number: "100",
+  title: "Тренажеров",
+  text: "Современные тренажеры на все группы мышц",
+})
+</code></pre>
+              </div>
+            </section>
+            <section id="card-stock">
+              <h2 class="uikit__title uikit__title--h2">Карточка акции</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.card-stock</p>
+                <div class="card-stock">
+                  <h3 class="title title--h4">Месяц бесплатно
+                  </h3>
+                  <div class="card-stock__text text text--medium">
+                    <p>Приведи друга, получи абонемент в подарок</p>
+                  </div>
+                  <div class="card-stock__link-wrapper">
+                    <a class="link link--dark card-stock__link" href="#/">Подробнее
+                    </a>
+                  </div>
+                </div>
+                <pre><code class="language-pug">+card-stock({
+  title: "Месяц бесплатно",
+  text: "Приведи друга, получи абонемент в подарок",
+
+})</code></pre>
+              </div>
+            </section>
+            <section id="banner-stock">
+              <h2 class="uikit__title uikit__title--h2">Баннер акции</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.banner-stock
+                  <div class="banner-stock">
+                    <div class="banner-stock__content">
+                      <p class="banner-stock__title">Год</p>
+                      <p class="banner-stock__price">4999</p>
+                      <div class="banner-stock__text text text--large">
+                        <p>Безлимитный абонемент в тренажерный зал</p>
+                      </div>
+                      <div class="banner-stock__link-wrapper">
+                        <a class="link banner-stock__link" href="#/">Подробнее
+                        </a>
+                      </div>
+                    </div>
+                    <div class="banner-stock__background">
+                      <picture>
+                        <source type="image/webp" srcset="img/content/stock/banner-stock.webp, img/content/stock/banner-stock@2x.webp 2x"><img src="img/content/stock/banner-stock.jpg" srcset="img/content/stock/banner-stock@2x.jpg 2x" width="280" height="462" alt="Девушка">
+                      </picture>
+                    </div>
+                  </div>
+                </p>
+                <pre><code class="language-pug">+banner-stock({
+  title: "Год",
+  price: "4999",
+  text: "Безлимитный абонемент в тренажерный зал",
+  img: {
+    name: "banner-stock",
+    path: "content/stock",
+    format: "jpg",
+    width: "280",
+    height: "462",
+    altText: "Девушка",
+  }
+})
+
+</code></pre>
+              </div>
+            </section>
+            <section id="tabs">
+              <h2 class="uikit__title uikit__title--h2">табы</h2>
+              <div class="uikit__component">
+                <p class="uikit__text uikit__text--class">.tabs</p>
+                <div class="tabs" data-tabs="controls">
+                  <button class="tabs__control is-active" type="button" data-tabs="control">1 месяц</button>
+                  <button class="tabs__control" type="button" data-tabs="control">6 месяцев</button>
+                  <button class="tabs__control is-disabled" type="button" data-tabs="control">12 месяцев</button>
+                </div>
+                <pre><code class="language-pug">+tabs([
+  {
+    text: "1 месяц",
+    mods: "is-active",
+  },
+  {
+    text: "6 месяцев",
+  },
+  {
+    text: "12 месяцев",
+  },
+  {
+    text: "24 месяца",
+    mods: "is-disabled",
+  },
+])
+
+
+</code></pre>
+              </div>
+            </section>
+          </div>
+        </div>
+      </main>
+      <script>/* PrismJS 1.29.0
+https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+pug */
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(e){var n=/(?:^|\s)lang(?:uage)?-([\w-]+)(?=\s|$)/i,t=0,r={},a={manual:e.Prism&&e.Prism.manual,disableWorkerMessageHandler:e.Prism&&e.Prism.disableWorkerMessageHandler,util:{encode:function e(n){return n instanceof i?new i(n.type,e(n.content),n.alias):Array.isArray(n)?n.map(e):n.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).slice(8,-1)},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function e(n,t){var r,i;switch(t=t||{},a.util.type(n)){case"Object":if(i=a.util.objId(n),t[i])return t[i];for(var l in r={},t[i]=r,n)n.hasOwnProperty(l)&&(r[l]=e(n[l],t));return r;case"Array":return i=a.util.objId(n),t[i]?t[i]:(r=[],t[i]=r,n.forEach((function(n,a){r[a]=e(n,t)})),r);default:return n}},getLanguage:function(e){for(;e;){var t=n.exec(e.className);if(t)return t[1].toLowerCase();e=e.parentElement}return"none"},setLanguage:function(e,t){e.className=e.className.replace(RegExp(n,"gi"),""),e.classList.add("language-"+t)},currentScript:function(){if("undefined"==typeof document)return null;if("currentScript"in document)return document.currentScript;try{throw new Error}catch(r){var e=(/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(r.stack)||[])[1];if(e){var n=document.getElementsByTagName("script");for(var t in n)if(n[t].src==e)return n[t]}return null}},isActive:function(e,n,t){for(var r="no-"+n;e;){var a=e.classList;if(a.contains(n))return!0;if(a.contains(r))return!1;e=e.parentElement}return!!t}},languages:{plain:r,plaintext:r,text:r,txt:r,extend:function(e,n){var t=a.util.clone(a.languages[e]);for(var r in n)t[r]=n[r];return t},insertBefore:function(e,n,t,r){var i=(r=r||a.languages)[e],l={};for(var o in i)if(i.hasOwnProperty(o)){if(o==n)for(var s in t)t.hasOwnProperty(s)&&(l[s]=t[s]);t.hasOwnProperty(o)||(l[o]=i[o])}var u=r[e];return r[e]=l,a.languages.DFS(a.languages,(function(n,t){t===u&&n!=e&&(this[n]=l)})),l},DFS:function e(n,t,r,i){i=i||{};var l=a.util.objId;for(var o in n)if(n.hasOwnProperty(o)){t.call(n,o,n[o],r||o);var s=n[o],u=a.util.type(s);"Object"!==u||i[l(s)]?"Array"!==u||i[l(s)]||(i[l(s)]=!0,e(s,t,o,i)):(i[l(s)]=!0,e(s,t,null,i))}}},plugins:{},highlightAll:function(e,n){a.highlightAllUnder(document,e,n)},highlightAllUnder:function(e,n,t){var r={callback:t,container:e,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};a.hooks.run("before-highlightall",r),r.elements=Array.prototype.slice.apply(r.container.querySelectorAll(r.selector)),a.hooks.run("before-all-elements-highlight",r);for(var i,l=0;i=r.elements[l++];)a.highlightElement(i,!0===n,r.callback)},highlightElement:function(n,t,r){var i=a.util.getLanguage(n),l=a.languages[i];a.util.setLanguage(n,i);var o=n.parentElement;o&&"pre"===o.nodeName.toLowerCase()&&a.util.setLanguage(o,i);var s={element:n,language:i,grammar:l,code:n.textContent};function u(e){s.highlightedCode=e,a.hooks.run("before-insert",s),s.element.innerHTML=s.highlightedCode,a.hooks.run("after-highlight",s),a.hooks.run("complete",s),r&&r.call(s.element)}if(a.hooks.run("before-sanity-check",s),(o=s.element.parentElement)&&"pre"===o.nodeName.toLowerCase()&&!o.hasAttribute("tabindex")&&o.setAttribute("tabindex","0"),!s.code)return a.hooks.run("complete",s),void(r&&r.call(s.element));if(a.hooks.run("before-highlight",s),s.grammar)if(t&&e.Worker){var c=new Worker(a.filename);c.onmessage=function(e){u(e.data)},c.postMessage(JSON.stringify({language:s.language,code:s.code,immediateClose:!0}))}else u(a.highlight(s.code,s.grammar,s.language));else u(a.util.encode(s.code))},highlight:function(e,n,t){var r={code:e,grammar:n,language:t};if(a.hooks.run("before-tokenize",r),!r.grammar)throw new Error('The language "'+r.language+'" has no grammar.');return r.tokens=a.tokenize(r.code,r.grammar),a.hooks.run("after-tokenize",r),i.stringify(a.util.encode(r.tokens),r.language)},tokenize:function(e,n){var t=n.rest;if(t){for(var r in t)n[r]=t[r];delete n.rest}var a=new s;return u(a,a.head,e),o(e,a,n,a.head,0),function(e){for(var n=[],t=e.head.next;t!==e.tail;)n.push(t.value),t=t.next;return n}(a)},hooks:{all:{},add:function(e,n){var t=a.hooks.all;t[e]=t[e]||[],t[e].push(n)},run:function(e,n){var t=a.hooks.all[e];if(t&&t.length)for(var r,i=0;r=t[i++];)r(n)}},Token:i};function i(e,n,t,r){this.type=e,this.content=n,this.alias=t,this.length=0|(r||"").length}function l(e,n,t,r){e.lastIndex=n;var a=e.exec(t);if(a&&r&&a[1]){var i=a[1].length;a.index+=i,a[0]=a[0].slice(i)}return a}function o(e,n,t,r,s,g){for(var f in t)if(t.hasOwnProperty(f)&&t[f]){var h=t[f];h=Array.isArray(h)?h:[h];for(var d=0;d<h.length;++d){if(g&&g.cause==f+","+d)return;var v=h[d],p=v.inside,m=!!v.lookbehind,y=!!v.greedy,k=v.alias;if(y&&!v.pattern.global){var x=v.pattern.toString().match(/[imsuy]*$/)[0];v.pattern=RegExp(v.pattern.source,x+"g")}for(var b=v.pattern||v,w=r.next,A=s;w!==n.tail&&!(g&&A>=g.reach);A+=w.value.length,w=w.next){var E=w.value;if(n.length>e.length)return;if(!(E instanceof i)){var P,L=1;if(y){if(!(P=l(b,A,e,m))||P.index>=e.length)break;var S=P.index,O=P.index+P[0].length,j=A;for(j+=w.value.length;S>=j;)j+=(w=w.next).value.length;if(A=j-=w.value.length,w.value instanceof i)continue;for(var C=w;C!==n.tail&&(j<O||"string"==typeof C.value);C=C.next)L++,j+=C.value.length;L--,E=e.slice(A,j),P.index-=A}else if(!(P=l(b,0,E,m)))continue;S=P.index;var N=P[0],_=E.slice(0,S),M=E.slice(S+N.length),W=A+E.length;g&&W>g.reach&&(g.reach=W);var z=w.prev;if(_&&(z=u(n,z,_),A+=_.length),c(n,z,L),w=u(n,z,new i(f,p?a.tokenize(N,p):N,k,N)),M&&u(n,w,M),L>1){var I={cause:f+","+d,reach:W};o(e,n,t,w.prev,A,I),g&&I.reach>g.reach&&(g.reach=I.reach)}}}}}}function s(){var e={value:null,prev:null,next:null},n={value:null,prev:e,next:null};e.next=n,this.head=e,this.tail=n,this.length=0}function u(e,n,t){var r=n.next,a={value:t,prev:n,next:r};return n.next=a,r.prev=a,e.length++,a}function c(e,n,t){for(var r=n.next,a=0;a<t&&r!==e.tail;a++)r=r.next;n.next=r,r.prev=n,e.length-=a}if(e.Prism=a,i.stringify=function e(n,t){if("string"==typeof n)return n;if(Array.isArray(n)){var r="";return n.forEach((function(n){r+=e(n,t)})),r}var i={type:n.type,content:e(n.content,t),tag:"span",classes:["token",n.type],attributes:{},language:t},l=n.alias;l&&(Array.isArray(l)?Array.prototype.push.apply(i.classes,l):i.classes.push(l)),a.hooks.run("wrap",i);var o="";for(var s in i.attributes)o+=" "+s+'="'+(i.attributes[s]||"").replace(/"/g,"&quot;")+'"';return"<"+i.tag+' class="'+i.classes.join(" ")+'"'+o+">"+i.content+"</"+i.tag+">"},!e.document)return e.addEventListener?(a.disableWorkerMessageHandler||e.addEventListener("message",(function(n){var t=JSON.parse(n.data),r=t.language,i=t.code,l=t.immediateClose;e.postMessage(a.highlight(i,a.languages[r],r)),l&&e.close()}),!1),a):a;var g=a.util.currentScript();function f(){a.manual||a.highlightAll()}if(g&&(a.filename=g.src,g.hasAttribute("data-manual")&&(a.manual=!0)),!a.manual){var h=document.readyState;"loading"===h||"interactive"===h&&g&&g.defer?document.addEventListener("DOMContentLoaded",f):window.requestAnimationFrame?window.requestAnimationFrame(f):window.setTimeout(f,16)}return a}(_self);"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+Prism.languages.markup={comment:{pattern:/<!--(?:(?!<!--)[\s\S])*?-->/,greedy:!0},prolog:{pattern:/<\?[\s\S]+?\?>/,greedy:!0},doctype:{pattern:/<!DOCTYPE(?:[^>"'[\]]|"[^"]*"|'[^']*')+(?:\[(?:[^<"'\]]|"[^"]*"|'[^']*'|<(?!!--)|<!--(?:[^-]|-(?!->))*-->)*\]\s*)?>/i,greedy:!0,inside:{"internal-subset":{pattern:/(^[^\[]*\[)[\s\S]+(?=\]>$)/,lookbehind:!0,greedy:!0,inside:null},string:{pattern:/"[^"]*"|'[^']*'/,greedy:!0},punctuation:/^<!|>$|[[\]]/,"doctype-tag":/^DOCTYPE/i,name:/[^\s<>'"]+/}},cdata:{pattern:/<!\[CDATA\[[\s\S]*?\]\]>/i,greedy:!0},tag:{pattern:/<\/?(?!\d)[^\s>\/=$<%]+(?:\s(?:\s*[^\s>\/=]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))|(?=[\s/>])))+)?\s*\/?>/,greedy:!0,inside:{tag:{pattern:/^<\/?[^\s>\/]+/,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"special-attr":[],"attr-value":{pattern:/=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+)/,inside:{punctuation:[{pattern:/^=/,alias:"attr-equals"},{pattern:/^(\s*)["']|["']$/,lookbehind:!0}]}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:[{pattern:/&[\da-z]{1,8};/i,alias:"named-entity"},/&#x?[\da-f]{1,8};/i]},Prism.languages.markup.tag.inside["attr-value"].inside.entity=Prism.languages.markup.entity,Prism.languages.markup.doctype.inside["internal-subset"].inside=Prism.languages.markup,Prism.hooks.add("wrap",(function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))})),Object.defineProperty(Prism.languages.markup.tag,"addInlined",{value:function(a,e){var s={};s["language-"+e]={pattern:/(^<!\[CDATA\[)[\s\S]+?(?=\]\]>$)/i,lookbehind:!0,inside:Prism.languages[e]},s.cdata=/^<!\[CDATA\[|\]\]>$/i;var t={"included-cdata":{pattern:/<!\[CDATA\[[\s\S]*?\]\]>/i,inside:s}};t["language-"+e]={pattern:/[\s\S]+/,inside:Prism.languages[e]};var n={};n[a]={pattern:RegExp("(<__[^>]*>)(?:<!\\[CDATA\\[(?:[^\\]]|\\](?!\\]>))*\\]\\]>|(?!<!\\[CDATA\\[)[^])*?(?=</__>)".replace(/__/g,(function(){return a})),"i"),lookbehind:!0,greedy:!0,inside:t},Prism.languages.insertBefore("markup","cdata",n)}}),Object.defineProperty(Prism.languages.markup.tag,"addAttribute",{value:function(a,e){Prism.languages.markup.tag.inside["special-attr"].push({pattern:RegExp("(^|[\"'\\s])(?:"+a+")\\s*=\\s*(?:\"[^\"]*\"|'[^']*'|[^\\s'\">=]+(?=[\\s>]))","i"),lookbehind:!0,inside:{"attr-name":/^[^\s=]+/,"attr-value":{pattern:/=[\s\S]+/,inside:{value:{pattern:/(^=\s*(["']|(?!["'])))\S[\s\S]*(?=\2$)/,lookbehind:!0,alias:[e,"language-"+e],inside:Prism.languages[e]},punctuation:[{pattern:/^=/,alias:"attr-equals"},/"|'/]}}}})}}),Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup,Prism.languages.xml=Prism.languages.extend("markup",{}),Prism.languages.ssml=Prism.languages.xml,Prism.languages.atom=Prism.languages.xml,Prism.languages.rss=Prism.languages.xml;
+!function(s){var e=/(?:"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"|'(?:\\(?:\r\n|[\s\S])|[^'\\\r\n])*')/;s.languages.css={comment:/\/\*[\s\S]*?\*\//,atrule:{pattern:RegExp("@[\\w-](?:[^;{\\s\"']|\\s+(?!\\s)|"+e.source+")*?(?:;|(?=\\s*\\{))"),inside:{rule:/^@[\w-]+/,"selector-function-argument":{pattern:/(\bselector\s*\(\s*(?![\s)]))(?:[^()\s]|\s+(?![\s)])|\((?:[^()]|\([^()]*\))*\))+(?=\s*\))/,lookbehind:!0,alias:"selector"},keyword:{pattern:/(^|[^\w-])(?:and|not|only|or)(?![\w-])/,lookbehind:!0}}},url:{pattern:RegExp("\\burl\\((?:"+e.source+"|(?:[^\\\\\r\n()\"']|\\\\[^])*)\\)","i"),greedy:!0,inside:{function:/^url/i,punctuation:/^\(|\)$/,string:{pattern:RegExp("^"+e.source+"$"),alias:"url"}}},selector:{pattern:RegExp("(^|[{}\\s])[^{}\\s](?:[^{};\"'\\s]|\\s+(?![\\s{])|"+e.source+")*(?=\\s*\\{)"),lookbehind:!0},string:{pattern:e,greedy:!0},property:{pattern:/(^|[^-\w\xA0-\uFFFF])(?!\s)[-_a-z\xA0-\uFFFF](?:(?!\s)[-\w\xA0-\uFFFF])*(?=\s*:)/i,lookbehind:!0},important:/!important\b/i,function:{pattern:/(^|[^-a-z0-9])[-a-z0-9]+(?=\()/i,lookbehind:!0},punctuation:/[(){};:,]/},s.languages.css.atrule.inside.rest=s.languages.css;var t=s.languages.markup;t&&(t.tag.addInlined("style","css"),t.tag.addAttribute("style","css"))}(Prism);
+Prism.languages.clike={comment:[{pattern:/(^|[^\\])\/\*[\s\S]*?(?:\*\/|$)/,lookbehind:!0,greedy:!0},{pattern:/(^|[^\\:])\/\/.*/,lookbehind:!0,greedy:!0}],string:{pattern:/(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,greedy:!0},"class-name":{pattern:/(\b(?:class|extends|implements|instanceof|interface|new|trait)\s+|\bcatch\s+\()[\w.\\]+/i,lookbehind:!0,inside:{punctuation:/[.\\]/}},keyword:/\b(?:break|catch|continue|do|else|finally|for|function|if|in|instanceof|new|null|return|throw|try|while)\b/,boolean:/\b(?:false|true)\b/,function:/\b\w+(?=\()/,number:/\b0x[\da-f]+\b|(?:\b\d+(?:\.\d*)?|\B\.\d+)(?:e[+-]?\d+)?/i,operator:/[<>]=?|[!=]=?=?|--?|\+\+?|&&?|\|\|?|[?*/~^%]/,punctuation:/[{}[\];(),.:]/};
+Prism.languages.javascript=Prism.languages.extend("clike",{"class-name":[Prism.languages.clike["class-name"],{pattern:/(^|[^$\w\xA0-\uFFFF])(?!\s)[_$A-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\.(?:constructor|prototype))/,lookbehind:!0}],keyword:[{pattern:/((?:^|\})\s*)catch\b/,lookbehind:!0},{pattern:/(^|[^.]|\.\.\.\s*)\b(?:as|assert(?=\s*\{)|async(?=\s*(?:function\b|\(|[$\w\xA0-\uFFFF]|$))|await|break|case|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally(?=\s*(?:\{|$))|for|from(?=\s*(?:['"]|$))|function|(?:get|set)(?=\s*(?:[#\[$\w\xA0-\uFFFF]|$))|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)\b/,lookbehind:!0}],function:/#?(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\s*(?:\.\s*(?:apply|bind|call)\s*)?\()/,number:{pattern:RegExp("(^|[^\\w$])(?:NaN|Infinity|0[bB][01]+(?:_[01]+)*n?|0[oO][0-7]+(?:_[0-7]+)*n?|0[xX][\\dA-Fa-f]+(?:_[\\dA-Fa-f]+)*n?|\\d+(?:_\\d+)*n|(?:\\d+(?:_\\d+)*(?:\\.(?:\\d+(?:_\\d+)*)?)?|\\.\\d+(?:_\\d+)*)(?:[Ee][+-]?\\d+(?:_\\d+)*)?)(?![\\w$])"),lookbehind:!0},operator:/--|\+\+|\*\*=?|=>|&&=?|\|\|=?|[!=]==|<<=?|>>>?=?|[-+*/%&|^!=<>]=?|\.{3}|\?\?=?|\?\.?|[~:]/}),Prism.languages.javascript["class-name"][0].pattern=/(\b(?:class|extends|implements|instanceof|interface|new)\s+)[\w.\\]+/,Prism.languages.insertBefore("javascript","keyword",{regex:{pattern:RegExp("((?:^|[^$\\w\\xA0-\\uFFFF.\"'\\])\\s]|\\b(?:return|yield))\\s*)/(?:(?:\\[(?:[^\\]\\\\\r\n]|\\\\.)*\\]|\\\\.|[^/\\\\\\[\r\n])+/[dgimyus]{0,7}|(?:\\[(?:[^[\\]\\\\\r\n]|\\\\.|\\[(?:[^[\\]\\\\\r\n]|\\\\.|\\[(?:[^[\\]\\\\\r\n]|\\\\.)*\\])*\\])*\\]|\\\\.|[^/\\\\\\[\r\n])+/[dgimyus]{0,7}v[dgimyus]{0,7})(?=(?:\\s|/\\*(?:[^*]|\\*(?!/))*\\*/)*(?:$|[\r\n,.;:})\\]]|//))"),lookbehind:!0,greedy:!0,inside:{"regex-source":{pattern:/^(\/)[\s\S]+(?=\/[a-z]*$)/,lookbehind:!0,alias:"language-regex",inside:Prism.languages.regex},"regex-delimiter":/^\/|\/$/,"regex-flags":/^[a-z]+$/}},"function-variable":{pattern:/#?(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\s*[=:]\s*(?:async\s*)?(?:\bfunction\b|(?:\((?:[^()]|\([^()]*\))*\)|(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*)\s*=>))/,alias:"function"},parameter:[{pattern:/(function(?:\s+(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*)?\s*\(\s*)(?!\s)(?:[^()\s]|\s+(?![\s)])|\([^()]*\))+(?=\s*\))/,lookbehind:!0,inside:Prism.languages.javascript},{pattern:/(^|[^$\w\xA0-\uFFFF])(?!\s)[_$a-z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\s*=>)/i,lookbehind:!0,inside:Prism.languages.javascript},{pattern:/(\(\s*)(?!\s)(?:[^()\s]|\s+(?![\s)])|\([^()]*\))+(?=\s*\)\s*=>)/,lookbehind:!0,inside:Prism.languages.javascript},{pattern:/((?:\b|\s|^)(?!(?:as|async|await|break|case|catch|class|const|continue|debugger|default|delete|do|else|enum|export|extends|finally|for|from|function|get|if|implements|import|in|instanceof|interface|let|new|null|of|package|private|protected|public|return|set|static|super|switch|this|throw|try|typeof|undefined|var|void|while|with|yield)(?![$\w\xA0-\uFFFF]))(?:(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*\s*)\(\s*|\]\s*\(\s*)(?!\s)(?:[^()\s]|\s+(?![\s)])|\([^()]*\))+(?=\s*\)\s*\{)/,lookbehind:!0,inside:Prism.languages.javascript}],constant:/\b[A-Z](?:[A-Z_]|\dx?)*\b/}),Prism.languages.insertBefore("javascript","string",{hashbang:{pattern:/^#!.*/,greedy:!0,alias:"comment"},"template-string":{pattern:/`(?:\\[\s\S]|\$\{(?:[^{}]|\{(?:[^{}]|\{[^}]*\})*\})+\}|(?!\$\{)[^\\`])*`/,greedy:!0,inside:{"template-punctuation":{pattern:/^`|`$/,alias:"string"},interpolation:{pattern:/((?:^|[^\\])(?:\\{2})*)\$\{(?:[^{}]|\{(?:[^{}]|\{[^}]*\})*\})+\}/,lookbehind:!0,inside:{"interpolation-punctuation":{pattern:/^\$\{|\}$/,alias:"punctuation"},rest:Prism.languages.javascript}},string:/[\s\S]+/}},"string-property":{pattern:/((?:^|[,{])[ \t]*)(["'])(?:\\(?:\r\n|[\s\S])|(?!\2)[^\\\r\n])*\2(?=\s*:)/m,lookbehind:!0,greedy:!0,alias:"property"}}),Prism.languages.insertBefore("javascript","operator",{"literal-property":{pattern:/((?:^|[,{])[ \t]*)(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\s*:)/m,lookbehind:!0,alias:"property"}}),Prism.languages.markup&&(Prism.languages.markup.tag.addInlined("script","javascript"),Prism.languages.markup.tag.addAttribute("on(?:abort|blur|change|click|composition(?:end|start|update)|dblclick|error|focus(?:in|out)?|key(?:down|up)|load|mouse(?:down|enter|leave|move|out|over|up)|reset|resize|scroll|select|slotchange|submit|unload|wheel)","javascript")),Prism.languages.js=Prism.languages.javascript;
+!function(e){e.languages.pug={comment:{pattern:/(^([\t ]*))\/\/.*(?:(?:\r?\n|\r)\2[\t ].+)*/m,lookbehind:!0},"multiline-script":{pattern:/(^([\t ]*)script\b.*\.[\t ]*)(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/m,lookbehind:!0,inside:e.languages.javascript},filter:{pattern:/(^([\t ]*)):.+(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/m,lookbehind:!0,inside:{"filter-name":{pattern:/^:[\w-]+/,alias:"variable"},text:/\S[\s\S]*/}},"multiline-plain-text":{pattern:/(^([\t ]*)[\w\-#.]+\.[\t ]*)(?:(?:\r?\n|\r(?!\n))(?:\2[\t ].+|\s*?(?=\r?\n|\r)))+/m,lookbehind:!0},markup:{pattern:/(^[\t ]*)<.+/m,lookbehind:!0,inside:e.languages.markup},doctype:{pattern:/((?:^|\n)[\t ]*)doctype(?: .+)?/,lookbehind:!0},"flow-control":{pattern:/(^[\t ]*)(?:case|default|each|else|if|unless|when|while)\b(?: .+)?/m,lookbehind:!0,inside:{each:{pattern:/^each .+? in\b/,inside:{keyword:/\b(?:each|in)\b/,punctuation:/,/}},branch:{pattern:/^(?:case|default|else|if|unless|when|while)\b/,alias:"keyword"},rest:e.languages.javascript}},keyword:{pattern:/(^[\t ]*)(?:append|block|extends|include|prepend)\b.+/m,lookbehind:!0},mixin:[{pattern:/(^[\t ]*)mixin .+/m,lookbehind:!0,inside:{keyword:/^mixin/,function:/\w+(?=\s*\(|\s*$)/,punctuation:/[(),.]/}},{pattern:/(^[\t ]*)\+.+/m,lookbehind:!0,inside:{name:{pattern:/^\+\w+/,alias:"function"},rest:e.languages.javascript}}],script:{pattern:/(^[\t ]*script(?:(?:&[^(]+)?\([^)]+\))*[\t ]).+/m,lookbehind:!0,inside:e.languages.javascript},"plain-text":{pattern:/(^[\t ]*(?!-)[\w\-#.]*[\w\-](?:(?:&[^(]+)?\([^)]+\))*\/?[\t ]).+/m,lookbehind:!0},tag:{pattern:/(^[\t ]*)(?!-)[\w\-#.]*[\w\-](?:(?:&[^(]+)?\([^)]+\))*\/?:?/m,lookbehind:!0,inside:{attributes:[{pattern:/&[^(]+\([^)]+\)/,inside:e.languages.javascript},{pattern:/\([^)]+\)/,inside:{"attr-value":{pattern:/(=\s*(?!\s))(?:\{[^}]*\}|[^,)\r\n]+)/,lookbehind:!0,inside:e.languages.javascript},"attr-name":/[\w-]+(?=\s*!?=|\s*[,)])/,punctuation:/[!=(),]+/}}],punctuation:/:/,"attr-id":/#[\w\-]+/,"attr-class":/\.[\w\-]+/}},code:[{pattern:/(^[\t ]*(?:-|!?=)).+/m,lookbehind:!0,inside:e.languages.javascript}],punctuation:/[.\-!=|]+/};for(var t=[{filter:"atpl",language:"twig"},{filter:"coffee",language:"coffeescript"},"ejs","handlebars","less","livescript","markdown",{filter:"sass",language:"scss"},"stylus"],n={},a=0,i=t.length;a<i;a++){var r=t[a];r="string"==typeof r?{filter:r,language:r}:r,e.languages[r.language]&&(n["filter-"+r.filter]={pattern:RegExp("(^([\t ]*)):<filter_name>(?:(?:\r?\n|\r(?!\n))(?:\\2[\t ].+|\\s*?(?=\r?\n|\r)))+".replace("<filter_name>",(function(){return r.filter})),"m"),lookbehind:!0,inside:{"filter-name":{pattern:/^:[\w-]+/,alias:"variable"},text:{pattern:/\S[\s\S]*/,alias:[r.language,"language-"+r.language],inside:e.languages[r.language]}}})}e.languages.insertBefore("pug","filter",n)}(Prism);
+
+      </script>
+    </div>
+    <div class="modal modal--preload modal--feedback" data-modal="feedback">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Обычная модалка</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="modal modal--preload modal--success modal--no-scale modal--fit-content" data-modal="success">
+      <div class="modal__wrapper">
+        <div class="modal__overlay" data-close-modal></div>
+        <div class="modal__content">
+          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br>отключена анимация-скейл</p>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="15" height="15" aria-hidden="true">
+              <use xlink:href="#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

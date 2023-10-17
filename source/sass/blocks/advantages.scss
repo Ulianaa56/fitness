@@ -1,0 +1,110 @@
+.advantages {
+  padding-top: 120px;
+  padding-bottom: 111px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 101px;
+    padding-bottom: 93px;
+  }
+
+  @include vp-767 {
+    padding-top: 75px;
+    padding-bottom: 43px;
+  }
+
+  .container {
+    max-width: 1210px;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 54px;
+
+    @include vp-1199 {
+      margin-bottom: 41px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 240px 1fr;
+    column-gap: 60px;
+
+    @include vp-1199 {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 48px;
+      row-gap: 42px;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+      row-gap: 35px;
+    }
+  }
+
+  &__item--top {
+    padding-bottom: 75px;
+    border-bottom: 1px solid rgb($color-crimson, 0.2);
+
+    @include vp-1199 {
+      padding-bottom: 0;
+      border: none;
+    }
+  }
+
+  &__item--bottom {
+    padding-top: 71px;
+
+    @include vp-1199 {
+      padding-top: 0;
+      border: none;
+    }
+  }
+
+  &__item-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    @include vp-1199 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    @include vp-767 {
+      grid-column-end: 2;
+      grid-row-start: 3;
+      grid-row-end: 4;
+      margin-top: 9px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__item-main .card-advantages-main {
+    max-width: 442px;
+    width: 100%;
+    margin-top: 4px;
+
+    @include vp-1199 {
+      margin-top: 0;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+}

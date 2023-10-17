@@ -1,0 +1,253 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: $color-default-white;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  position: relative;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: currentColor;
+  text-decoration-skip-ink: none;
+  outline: none;
+  -webkit-tap-highlight-color: $color-transparent;
+  transition:
+    text-decoration-color $trans-default,
+    opacity $trans-default,
+    color $trans-default,
+    outline $trans-default;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 20px);
+    height: calc(100% + 10px);
+    left: -10px;
+    top: -6px;
+    border: 1px solid currentColor;
+    background-color: $color-transparent;
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &[href],
+  &[type] {
+    cursor: pointer;
+
+    @include hover {
+      opacity: 0.8;
+    }
+
+    @include active {
+      opacity: 1;
+      text-decoration-color: currentColor;
+
+      @include hover {
+        opacity: 1;
+        text-decoration-color: currentColor;
+      }
+    }
+
+    @include focus {
+      opacity: 1;
+      text-decoration-color: transparent;
+
+      &::after {
+        border-color: currentColor;
+      }
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:disabled,
+  &[disabled],
+  &.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &--dark {
+    color: $color-sapphire;
+  }
+
+  &--main-phone {
+    position: relative;
+    padding: 0;
+    font-family: $ff-roboto-condensed;
+    font-size: 26px;
+    font-style: normal;
+    line-height: 26px;
+    text-decoration-color: transparent;
+    letter-spacing: unset;
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 24px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 22px;
+    }
+
+    @include hover-focus {
+      color: $color-resolution-blue;
+      outline: none;
+    }
+
+    @include active {
+      color: $color-sapphire;
+      outline: none;
+      text-decoration-color: currentColor;
+    }
+
+    &.is-disabled {
+      color: $color-ghost-white;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &--light-thin {
+    padding: 5px 10px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: unset;
+    text-transform: none;
+    line-height: 22px;
+    color: $color-default-white;
+    text-decoration: none;
+
+    @include vp-767 {
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 16px;
+      font-size: 16px;
+    }
+
+
+    .link__text {
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      text-decoration-color: $color-transparent;
+      text-decoration-skip-ink: none;
+      transition: text-decoration-color $trans-default;
+    }
+
+    &[href],
+    &[type] {
+      @include hover {
+        opacity: 1;
+
+        .link__text {
+          text-decoration-color: $color-default-white;
+        }
+      }
+
+      @include focus {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      @include active {
+        .link__text {
+          text-decoration-color: $color-transparent;
+        }
+
+        @include hover {
+          .link__text {
+            text-decoration-color: $color-transparent;
+          }
+        }
+      }
+    }
+
+    &:disabled,
+    &[disabled],
+    &.is-disabled {
+      opacity: 0.4;
+    }
+
+    &::before {
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &--dark-thin {
+    padding: 0;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: unset;
+    text-transform: none;
+    line-height: 22px;
+    color: $color-sapphire;
+    text-decoration: none;
+
+    @include vp-767 {
+      font-size: 16px;
+    }
+
+    .link__text {
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      text-decoration-color: $color-transparent;
+      text-decoration-skip-ink: none;
+      transition: text-decoration-color $trans-default;
+    }
+
+    &[href],
+    &[type] {
+      @include hover {
+        opacity: 1;
+
+        .link__text {
+          text-decoration-color: currentColor;
+        }
+      }
+
+      @include focus {
+        .link__text {
+          text-decoration-color: currentColor;
+        }
+      }
+
+      @include active {
+        .link__text {
+          text-decoration-color: $color-transparent;
+        }
+
+        @include hover {
+          .link__text {
+            text-decoration-color: $color-transparent;
+          }
+        }
+      }
+    }
+
+    &:disabled,
+    &[disabled],
+    &.is-disabled {
+      opacity: 0.4;
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}

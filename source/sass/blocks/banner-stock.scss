@@ -1,0 +1,105 @@
+.banner-stock {
+  display: flex;
+  min-height: 462px;
+  height: 100%;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 41px 45px 44px 45px;
+    color: $color-default-white;
+    background-color: $color-torch-red;
+
+    @include vp-1199 {
+      width: 41.2%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-bottom: 44px;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 0 0 3px 0;
+  }
+
+  &__price {
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 700;
+    margin: 0 0 19px 0;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    min-height: 217px;
+
+    @include vp-767 {
+      min-height: unset;
+      margin-bottom: 34px;
+    }
+  }
+
+  &__text p {
+    margin: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: auto;
+    margin-left: -15px;
+    margin-bottom: -15px;
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    width: fit-content;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__background {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+
+    @include vp-1199 {
+      width: 58.8%;
+      padding-bottom: 67.9%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-bottom: 103.1%;
+    }
+  }
+
+  &__background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-position: top;
+  }
+}

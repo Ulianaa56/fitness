@@ -1,0 +1,193 @@
+.banner {
+  .container {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+
+    @include vp-1199 {
+      grid-template-columns: 43% 57%;
+    }
+
+    @include vp-767 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    padding: 77px 77px 85px 76px;
+    background-color: $color-torch-red;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      display: flex;
+      flex-direction: column;
+      padding: 35px 44px 29px;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-left: 43px;
+      padding-right: 43px;
+      padding-bottom: 39px;
+    }
+  }
+
+  .banner__content > *:last-child {
+    margin-bottom: 0;
+  }
+
+  &__block {
+    display: flex;
+    margin-bottom: 22px;
+    padding-left: 2px;
+    padding-right: 2px;
+
+    @include vp-1199 {
+      margin-bottom: 7px;
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 17px;
+    }
+  }
+
+  &__title {
+    max-width: 180px;
+    margin-right: 71px;
+    text-transform: uppercase;
+
+    @include vp-1199 {
+      margin-right: 40px;
+    }
+  }
+
+  &__date-wrapper {
+    padding-top: 8px;
+    margin-left: auto;
+
+    @include vp-1199 {
+      padding-top: 4px;
+    }
+  }
+
+  &__date-title {
+    margin: 0 0 3px 0;
+    padding-bottom: 9px;
+    font-size: 18px;
+    line-height: 1;
+    border-bottom: 1px solid $color-default-white;
+
+    @include vp-1199 {
+      font-size: 12px;
+      margin-bottom: 3px;
+      padding-bottom: 4px;
+    }
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+
+  &__date:not(:last-child) {
+    margin-bottom: 24px;
+
+    @include vp-1199 {
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__date-inner {
+    display: flex;
+  }
+
+  &__date-number {
+    font-size: 40px;
+    line-height: 1;
+    font-weight: 700;
+
+    @include vp-1199 {
+      font-size: 24px;
+    }
+  }
+
+  &__date-text {
+    width: min-content;
+    margin-left: 7px;
+    padding-top: 3px;
+    font-size: 14px;
+    line-height: 18px;
+
+    @include vp-1199 {
+      font-size: 10px;
+      line-height: 12px;
+      margin-left: 4px;
+      padding-top: 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 47px;
+    padding-left: 2px;
+
+    @include vp-1199 {
+      margin-bottom: 20px;
+      padding-left: 1px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 19px;
+    }
+  }
+
+  &__text p {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    min-height: 71px;
+    margin-bottom: 15px;
+
+    @include vp-1199 {
+      margin-top: auto;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      font-size: 10px;
+      line-height: 11px;
+      min-height: unset;
+    }
+  }
+
+  &__background {
+    position: relative;
+
+    @include vp-1199 {
+      padding-bottom: 75.4%;
+    }
+
+    @include vp-767 {
+      width: 100%;
+      padding-bottom: 100.7%;
+    }
+  }
+
+  &__background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

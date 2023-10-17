@@ -1,0 +1,39 @@
+mixin footer(footerMods)
+  -
+    const navData = [
+      {
+        text: "Услуги",
+        href: "#/",
+      },
+      {
+        text: "Абонементы",
+        href: "#/",
+      },
+      {
+        text: "Акции",
+        href: "#/",
+      },
+      {
+        text: "Тренеры",
+        href: "#/",
+      },
+      {
+        text: "Расписание",
+        href: "#/",
+      },
+    ]
+
+  footer.footer(class=footerMods)
+    .container
+      .footer__icon-box
+        img(src="img/svg/logo-thin.svg", width="109", height="24", alt="Логотип Фитнес")
+      ul.footer__nav
+        each link in navData
+          li.footer__nav-item
+            +link({href: link.href, spanText: link.text, mods: ["light-thin"]})
+      .footer__socials
+        +socials([
+          {iconName: "logo-vk", href: "#/", label: "В Контакте"},
+          {iconName: "logo-ok",href: "#/", label: "Одноклассники"},
+          {iconName: "logo-reddit", href: "#/", label: "Reddit"}
+        ])

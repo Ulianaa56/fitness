@@ -1,0 +1,14 @@
+mixin btn-play(options = {})
+  -
+    const tag = options.tag || (options.href ? "a" : "button");
+    const href = options.href || false;
+    const type = options.type || tag === "button" ? options.type || "button" : false;
+    const mods = options.mods || [];
+    const classMods = mods.map((mod) => `btn-play--${mod}`).join(' ');
+    const label = options.label || false;
+    const isDisabled = options.isDisabled || false;
+
+  #{tag}.btn-play(href=href, type=type, aria-label=label, class=classMods, disabled=isDisabled)&attributes(attributes)
+    span.btn-play__wrapper
+    span.btn-play__icon
+      +icon("icon-play", 17, 17)

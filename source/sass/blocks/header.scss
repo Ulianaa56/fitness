@@ -1,0 +1,57 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 39px 0 20px 0;
+  z-index: 5;
+
+  background-color: transparent;
+
+  @include vp-1199 {
+    padding-top: 35px;
+  }
+
+  @include vp-767 {
+    padding-top: 16px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 608px;
+    margin-top: -10px;
+    margin-right: -20px;
+    margin-left: 20px;
+
+    @media (max-width: 799px) {
+      max-width: 380px;
+    }
+
+    @include vp-767 {
+      margin-right: 0;
+      max-width: 350px;
+    }
+
+    @media (max-width: 519px) {
+      max-width: 200px;
+    }
+  }
+
+  &__main-phone {
+    white-space: nowrap;
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-right: 20px;
+
+    @include vp-767 {
+      margin-right: 0;
+    }
+  }
+}

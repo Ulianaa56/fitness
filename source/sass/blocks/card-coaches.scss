@@ -1,0 +1,162 @@
+.card-coaches {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 113.1%;
+
+  @include vp-1199 {
+    padding-bottom: 109.9%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 121%;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 46px 10px 30px 10px;
+    background-color: rgba($color-sapphire, 0.89);
+    color: $color-default-white;
+    opacity: 0;
+    box-shadow: 0 0 35px 0 rgba($color-gulf-blue, 0.17);
+    transition: opacity $trans-default, box-shadow $trans-default;
+    outline: none;
+
+    @include hover-focus {
+      opacity: 1;
+    }
+
+    @include vp-1199 {
+      padding-top: 54px;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+
+    @include vp-767 {
+      padding-top: 45px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__content-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+    overflow: auto;
+
+    @include scrollbar($color-default-white);
+  }
+
+  &__name {
+    margin-bottom: 7px;
+
+    @include vp-1199 {
+      margin-bottom: 2px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 1px;
+    }
+  }
+
+  &__direction {
+    margin-bottom: 33px;
+    color: $color-spindle;
+
+    @include vp-767 {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    max-width: 183px;
+    padding: 0;
+    margin: 0 0 0 auto;
+
+    @include vp-1199 {
+      max-width: 83%;
+      width: 100%;
+    }
+
+    @include vp-767 {
+      max-width: 93%;
+      padding-left: 0;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 11px;
+    padding-left: 16px;
+
+    @include vp-767 {
+      margin-bottom: 14px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 7px;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      background-color: $color-default-white;
+      border-radius: 50%;
+
+      @include vp-767 {
+        top: 5px;
+      }
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-color: $color-grey;
+  }
+
+  &__photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+  }
+
+  &__name-intro {
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    bottom: 25px;
+    text-align: center;
+    color: $color-default-white;
+    transform: translateX(-50%);
+
+    @include vp-1199 {
+      bottom: 27px;
+    }
+  }
+}

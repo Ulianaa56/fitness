@@ -1,0 +1,237 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 18px 20px;
+  color: $color-default-white;
+  background-color: $color-transparent;
+  border: 4px solid $color-default-white;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  transition: background-color $trans-default, color $trans-default;
+  user-select: none;
+  outline: none;
+  isolation: isolate;
+  -webkit-tap-highlight-color: $color-transparent;
+
+  @include vp-1199 {
+    border-width: 2px;
+  }
+
+  &[href],
+  &[type] {
+    cursor: pointer;
+
+    @include hover-focus {
+      background-color: $color-default-white;
+      color: $color-egyptian-blue;
+    }
+
+    @include active {
+      background-color: $color-default-white;
+      color: $color-sapphire;
+
+      @include hover-focus {
+        color: $color-sapphire;
+      }
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &--dark {
+    position: static;
+    padding: 0;
+    color: $color-sapphire;
+    border: none;
+    transition: background-color $trans-default, color $trans-default;
+
+    .btn__text {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      padding: 18px 20px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-transparent;
+        border: 2px solid $color-sapphire;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $gradient-button;
+        opacity: 0;
+        transition: opacity $trans-default;
+        z-index: -1;
+      }
+    }
+
+    &[href],
+    &[type] {
+      @include hover-focus {
+        color: $color-default-white;
+        background-color: $color-transparent;
+
+        .btn__text::before {
+          display: none;
+        }
+
+        .btn__text::after {
+          opacity: 1;
+        }
+      }
+
+      @include active {
+        background-color: $color-transparent;
+        color: rgba($color-default-white, 0.7);
+
+        .btn__text::before {
+          display: none;
+        }
+
+        .btn__text::after {
+          opacity: 1;
+        }
+
+        @include hover-focus {
+          color: rgba($color-default-white, 0.7);
+        }
+      }
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+
+  &.btn--tab {
+    color: $color-sapphire;
+    text-transform: none;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: normal;
+    border: none;
+
+    @include vp-767 {
+      font-size: 16px;
+      padding: 14px 15px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-transparent;
+      border: 1px solid rgba($color-sapphire, 0.2);
+      transition: border-color $trans-default;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $gradient-button;
+      opacity: 0;
+      transition: opacity $trans-default;
+      z-index: -1;
+    }
+
+    @include hover-focus {
+      color: $color-sapphire;
+
+      &::before {
+        border-color: $color-sapphire;
+      }
+    }
+
+    @include active {
+      background-color: $color-transparent;
+      color: $color-default-white;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      @include hover-focus {
+        color: $color-default-white;
+      }
+    }
+
+    &.is-active {
+      pointer-events: none;
+      background-color: $color-transparent;
+      color: $color-default-white;
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+
+      @include focus {
+        pointer-events: none;
+        background-color: $color-transparent;
+        color: $color-default-white;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &:disabled,
+    &[disabled] {
+      opacity: 0.2;
+
+      &::before {
+        border-color: $color-sapphire;
+      }
+    }
+  }
+
+  &--sparse-text {
+    letter-spacing: 1.6px;
+  }
+}

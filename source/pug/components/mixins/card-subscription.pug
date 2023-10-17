@@ -1,0 +1,14 @@
+mixin card-subscription(options = {})
+  - const title = options.title
+  - const info = options.info
+  - const price = options.price
+
+  .card-subscription
+    +title({tag: "p", text: title, mods: ["h4"]})
+    +text(info, "medium")
+    .card-subscription__price-wrapper
+      .card-subscription__shadow!= price
+      .card-subscription__price!= price
+        span.card-subscription__ruble
+          +icon("icon-ruble", "30", "42")
+    +btn({href: "#/", textSpan: true, text: "Купить абонемент", mods: ["dark"]}).card-subscription__btn

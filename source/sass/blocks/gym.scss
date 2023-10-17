@@ -1,0 +1,174 @@
+.gym {
+  padding-bottom: 115px;
+
+  @include vp-1199 {
+    padding-bottom: 11%;
+  }
+
+  @include vp-767 {
+    padding-bottom: 0;
+  }
+
+  .container {
+    @include vp-767 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 355px 1fr;
+    column-gap: 145px;
+
+    @include vp-1199 {
+      display: flex;
+      flex-direction: column;
+      column-gap: unset;
+    }
+  }
+
+  &__content {
+    @include vp-1199 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 43px;
+    }
+
+    @include vp-767 {
+      align-items: flex-start;
+      padding: 0 15px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+
+    @include vp-1199 {
+      margin-bottom: 16px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 9px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 96px;
+
+    @include vp-1199 {
+      margin-bottom: 33px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 46px;
+    }
+  }
+
+  &__description {
+    @include vp-1199 {
+      max-width: 550px;
+    }
+
+    @include vp-767 {
+      max-width: unset;
+      margin-right: 10px;
+    }
+
+    p {
+      margin: 0;
+
+      @include vp-1199 {
+        text-align: center;
+
+        &:not(:first-of-type) {
+          display: none;
+        }
+      }
+
+      @include vp-767 {
+        text-align: left;
+        font-size: 14px;
+        line-height: 22px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 8px;
+
+        @include vp-1199 {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__visual-info {
+    position: relative;
+  }
+
+  &__background {
+    position: relative;
+
+    @include vp-1199 {
+      height: 0;
+      padding-top: 51%;
+      overflow: hidden;
+    }
+
+    @include vp-767 {
+      height: 313px;
+      margin-bottom: 40px;
+      padding-top: unset;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include vp-1199 {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      @include vp-767 {
+        position: relative;
+        top: unset;
+        left: unset;
+      }
+    }
+  }
+
+  &__video {
+    position: absolute;
+    top: 288px;
+    left: -63px;
+    z-index: 2;
+    width: 364px;
+    height: 228px;
+
+    @include vp-1199 {
+      top: unset;
+      bottom: 0;
+      left: 50%;
+      width: 39%;
+      height: fit-content;
+      transform: translate(-50%, 50%);
+    }
+
+    @include vp-767 {
+      position: relative;
+      left: unset;
+      bottom: unset;
+      transform: unset;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

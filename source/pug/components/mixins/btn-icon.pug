@@ -1,0 +1,17 @@
+mixin btn-icon(options = {})
+  -
+    const tag = options.href ? "a" : "button";
+    const href = options.href || false;
+    const type = options.type || tag === "button" ? options.type || "button" : false;
+    const target = options.isExternal ? "_blank" : false;
+    const rel = options.isExternal ? "nofollow noopener noreferrer" : false;
+    const mods = options.mods || [];
+    const classMods = mods.map((mod) => `btn-icon--${mod}`).join(' ');
+    const icon = options.icon ? [options.icon, options.width, options.height] : null;
+    const label = options.label || false;
+    const isDisabled = options.isDisabled || false;
+
+  #{tag}.btn-icon(href=href, target=target, rel=rel, type=type, aria-label=label, class=classMods, disabled=isDisabled)&attributes(attributes)
+    if icon
+      span.btn-icon__wrapper
+        +icon(...icon)

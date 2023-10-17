@@ -1,0 +1,17 @@
+mixin card-coaches(options = {})
+  - const name = options.name
+  - const direction = options.direction
+  - const image = options.image
+  - const infoList = options.infoList
+
+  .card-coaches
+    .card-coaches__content(tabindex="0")
+      .card-coaches__content-inner
+        +title({tag: "p", text: name, mods: ["h6"]}).card-coaches__name
+        +text(direction, "medium").card-coaches__direction
+        ul.card-coaches__list
+          each item in infoList
+            +text(item, "small", "li").card-coaches__item
+    .card-coaches__photo
+      +picture(image.path, image.img, image.format, image.width, image.height, image.alt)
+      +title({tag: "p", text: name, mods: ["h6"]}).card-coaches__name-intro

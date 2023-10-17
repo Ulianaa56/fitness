@@ -1,0 +1,15 @@
+mixin form()
+  .form(data-form-validate, data-callback="base")
+    +title({tag: "h2", mods: ["h3"], text: "Бесплатное занятие"}).form__title
+    form(method="post", action="https://echo.htmlacademy.ru")
+      .form__input-box
+        +custom-input({
+          inputPlaceholder: "Имя",
+          inputName: "user-name",
+        }).custom-input--narrow(data-validate-type="text", data-message-base="Поле обязательно к заполнению", data-required)
+        +custom-input({
+          inputType: "tel",
+          inputPlaceholder: "Телефон",
+          inputName: "user-phone",
+        }).custom-input--narrow(data-validate-type="phone", data-on-input-validate, data-message-base="Поле обязательно к заполнению", data-message-extra="Некорректный номер", data-required)
+      +btn({type: "submit", mods: ["sparse-text"], text: "Отправить"}).form__button

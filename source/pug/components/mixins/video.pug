@@ -1,0 +1,7 @@
+mixin video(src)
+  .video(data-src=src)
+    .video__screen
+      .video__button-box
+        +btn-play({label: "Кнопка", icon: "icon-arrow", width: "16", height: "32"})
+      .video__overlay
+      +picture("content", "video", "jpg", 364, 228, "")

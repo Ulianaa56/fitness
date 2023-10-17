@@ -1,0 +1,15 @@
+mixin gym()
+  section.gym(id="gym")
+    .container
+      .gym__inner
+        .gym__content
+          +title({tag: "h2", mods: ["h3"], text: "Тренажерный зал"}).gym__title
+          +title({tag: "h3", mods: ["h6"], text: "Просторный зал площадью&nbsp;900&nbsp;кв/м"}).gym__subtitle
+          .gym__description
+            p!= "Supergym&nbsp;&mdash; самый большой фитнес центр за&nbsp;Уралом и&nbsp;идеальное место для&nbsp;укрепления тела и&nbsp;здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов."
+            p!= "В&nbsp;зале расположены отдельная зона для Crossfit и&nbsp;кардио-зона с&nbsp;40&nbsp;тренажерами. Также в&nbsp;фитнес центре есть несколько оборудованных залов для&nbsp;различных видов групповых занятий."
+        .gym__visual-info
+          .gym__background
+            +picture("content", "gym-background", "jpg", 660, 401, "Тренажерный зал")
+          .gym__video
+            +video("https://www.youtube.com/embed/9TZXsZItgdw")

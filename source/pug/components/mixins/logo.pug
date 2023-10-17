@@ -1,0 +1,7 @@
+mixin logo()
+  if(currentUrl === "index.html")
+    span.logo&attributes(attributes)
+      img(src="img/svg/logo.svg", width="120", height="23", alt="Логотип Фитнес")
+  else
+    a.logo(href="index.html", aria-label="Перейти на Главную")&attributes(attributes)
+      img(src="img/svg/logo.svg", width="120", height="23", alt="Логотип Фитнес")

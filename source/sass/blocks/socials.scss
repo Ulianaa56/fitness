@@ -1,0 +1,55 @@
+.socials {
+  &__list {
+    margin: -11px 0 0 -11px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+  }
+
+  &__item {
+    margin-top: 11px;
+    margin-left: 11px;
+  }
+
+  &__link {
+    background-color: $color-default-white;
+    border-radius: 50%;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    color: $color-black-russian;
+    border: none;
+    outline: none;
+    transition: color $trans-default, background-color $trans-default;
+    -webkit-tap-highlight-color: $color-transparent;
+
+    &[href] {
+      @include hover-focus {
+        color: $color-default-white;
+        background-color: $color-egyptian-blue;
+      }
+
+      @include active {
+        color: $color-default-white;
+        background-color: $color-sapphire;
+
+        @include hover-focus {
+          color: $color-default-white;
+          background-color: $color-sapphire;
+        }
+      }
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__link.is-disabled {
+    pointer-events: none;
+    background-color: rgba($color-default-white, 0.3);
+  }
+}

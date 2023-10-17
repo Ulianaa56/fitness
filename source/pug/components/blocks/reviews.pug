@@ -1,0 +1,37 @@
+mixin reviews()
+  -
+    const reviewData = [
+      {
+        imgSource: "content",
+        imgName: "reviewer-1",
+        imgType: "jpg",
+        reviewer: "Анна Орлова",
+        text: "«Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»",
+      },
+      {
+        imgSource: "content",
+        imgName: "reviewer-1",
+        imgType: "jpg",
+        reviewer: "Екатерина Иванова",
+        text: "«Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»",
+      },
+      {
+        imgSource: "content",
+        imgName: "reviewer-1",
+        imgType: "jpg",
+        reviewer: "Ольга Левникова",
+        text: "«Хожу в&nbsp;Supergym уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»",
+      },
+    ]
+
+  section.reviews
+    .container
+      +title({tag: "h2", mods: ["h3"], text: "Отзывы"}).reviews__title
+      .reviews__inner
+        .reviews__swiper.swiper(data-slider="reviews")
+          ul.reviews__list.swiper-wrapper
+            each item in reviewData
+              li.reviews__list-item.swiper-slide
+                +card-review(item)
+          +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"}).reviews__btn.reviews__btn--left(data-slider="button-prev")
+          +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32", mods: ["rotate"]}).reviews__btn.reviews__btn--right(data-slider="button-next")

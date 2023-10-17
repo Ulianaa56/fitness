@@ -1,0 +1,18 @@
+mixin banner-stock(options = {})
+  -
+    const title = options.title || ""
+    const price = options.price || ""
+    const text = options.text || ""
+    const image = options.img ? [options.img.path, options.img.name, options.img.format, options.img.width, options.img.height, options.img.altText] : null;
+
+  .banner-stock
+    .banner-stock__content
+      p.banner-stock__title!= title
+      p.banner-stock__price!= price
+      .banner-stock__text.text.text--large
+        p!= text
+
+      .banner-stock__link-wrapper
+        +link({text: "Подробнее", href: "#/"}).banner-stock__link
+    .banner-stock__background
+      +picture(...image)

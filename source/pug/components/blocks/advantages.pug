@@ -1,0 +1,48 @@
+-
+  const advantages = [
+    {
+      mod: "top",
+      title: "Площадь",
+      text: "Занимайтесь без&nbsp;очередей и&nbsp;толкучки",
+      number: "900",
+      units: "кв/м",
+    },
+    {
+      mod: "top",
+      title: "Собственная парковка",
+      text: "Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке",
+      number: "70",
+      units: "машин",
+    },
+    {
+      mod: "bottom",
+      title: "Комфорт",
+      text: "Просторные раздевалки, душевые, фен, Wi-Fi, кулеры",
+      number: "350",
+      units: "мест",
+    },
+    {
+      mod: "bottom",
+      title: "Тренерский опыт",
+      text: "Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером",
+      number: "5+",
+      units: "лет",
+    },
+
+  ]
+
+mixin advantages()
+  section.advantages
+    .container
+      +title({tag: "h2", text: "Наши преимущества", mods: ["h3"]}).advantages__title
+      .advantages__wrapper
+        each item, index in advantages
+          .advantages__item(class=item.mod ? `advantages__item--${item.mod}`: null)
+            +card-advantages(item)
+
+        .advantages__item-main
+          +card-advantages-main({
+            number: "100",
+            title: "Тренажеров",
+            text: "Современные тренажеры на&nbsp;все группы мышц",
+          })

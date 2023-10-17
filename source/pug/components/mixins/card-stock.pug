@@ -1,0 +1,11 @@
+mixin card-stock(options = {})
+  -
+    const title = options.title || ""
+    const text = options.text || ""
+
+  .card-stock
+    +title({tag: "h3", text: title, mods: ["h4"]})
+    .card-stock__text.text.text--medium
+      p!= text
+    .card-stock__link-wrapper
+      +link({text: "Подробнее", href: "#/", mods: ["dark"]}).card-stock__link

@@ -1,0 +1,162 @@
+.btn-play {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  color: $color-default-white;
+  background-color: $color-transparent;
+  border-radius: 50%;
+  border: 0;
+  transition: background-color $trans-default, color $trans-default;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: $color-transparent;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    mask: linear-gradient($color-default-white 0 0) padding-box, linear-gradient($color-default-white 0 0);
+    mask-composite: exclude;
+    transition: opacity $trans-default;
+  }
+
+  &::before {
+    background: $gradient-button border-box;
+    opacity: 0.2;
+  }
+
+  &::after {
+    background-color: $color-sapphire;
+    opacity: 0;
+  }
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    transition: transform $trans-default;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      transition: opacity $trans-default;
+    }
+
+    &::before {
+      background: $gradient-95;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+      opacity: 0;
+    }
+
+    @include vp-1199 {
+      width: 53px;
+      height: 53px;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+
+  @include hover-focus {
+    color: $color-sapphire;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .btn-play__wrapper {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include active {
+    color: $color-sapphire;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .btn-play__wrapper {
+      transform: scale(0.8);
+
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &:disabled,
+  &[disabled] {
+    color: $color-sapphire;
+    opacity: 0.4;
+    pointer-events: none;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+
+    .btn-play__wrapper {
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}

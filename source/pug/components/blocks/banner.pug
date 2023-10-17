@@ -1,0 +1,23 @@
+mixin banner()
+  .banner
+    .container
+      .banner__content
+        .banner__block
+          +title({tag: "h2", text: "Super games", mods: ["h2"]}).banner__title
+          .banner__date-wrapper
+            .banner__date
+              p.banner__date-title Дата
+              .banner__date-inner
+                span.banner__date-number 7
+                span.banner__date-text Марта 2019
+            .banner__date
+              span.banner__date-title Время
+              .banner__date-inner
+                span.banner__date-number 12:00
+
+        .banner__text.text.text--large
+          p Ежегодные соревнования по&nbsp;CrossFit
+        +btn({text: "Заполнить заявку", href: "#/"}).banner__btn
+
+      .banner__background
+        +picture("content/banners", "super-games", "jpg", 660, 500, "Спортсмен")

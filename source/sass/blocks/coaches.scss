@@ -1,0 +1,91 @@
+.coaches {
+  margin-bottom: -35px;
+  padding-bottom: 35px;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding-bottom: 29px;
+    margin-bottom: -29px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+
+    @include vp-1199 {
+      text-align: center;
+      margin-bottom: 11px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__slider-block {
+    position: relative;
+
+    @include vp-1199 {
+      padding-left: 56px;
+      padding-right: 56px;
+    }
+
+    @include vp-767 {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &__swiper {
+    overflow: visible;
+  }
+
+  &__slider {
+    width: calc(100% + 70px);
+    margin-left: -35px;
+    margin-bottom: -35px;
+    padding: 35px;
+    overflow: hidden;
+
+    @include vp-1199 {
+      width: calc(100% + 58px);
+      margin-left: -29px;
+      margin-bottom: -29px;
+      padding: 29px;
+    }
+  }
+
+  &__slide {
+    height: auto;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+
+  &__btn--left {
+    left: -74px;
+
+    @include vp-1199 {
+      left: -18px;
+    }
+
+    @include vp-767 {
+      left: -12px;
+    }
+  }
+
+  &__btn--right {
+    right: -74px;
+
+    @include vp-1199 {
+      right: -18px;
+    }
+
+    @include vp-767 {
+      right: -12px;
+    }
+  }
+}

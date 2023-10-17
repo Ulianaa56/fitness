@@ -1,0 +1,95 @@
+.card-review {
+  width: 560px;
+  min-height: 242px;
+  background-color: $color-resolution-blue;
+  padding: 61px 62px 52px 62px;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+
+  @include vp-1199 {
+    width: 565px;
+    padding: 60px 62px 52px 62px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-width: 226px;
+    max-width: 450px;
+    padding: 30px 25px 37px 25px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    column-gap: 28px;
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      gap: unset;
+    }
+  }
+
+  &__photo-box {
+    grid-row-start: 1;
+    grid-row-end: 3;
+
+    @include vp-767 {
+      margin-bottom: 11px;
+    }
+
+    img {
+      object-fit: cover;
+      width: 80px;
+      height: 80px;
+
+      @include vp-767 {
+        width: 68px;
+        height: 68px;
+      }
+    }
+  }
+
+  &__photo-wrapper {
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include vp-767 {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto;
+    }
+  }
+
+  &__name-box {
+    margin-bottom: 8px;
+    color: $color-default-white;
+
+    @include vp-1199 {
+      margin-bottom: 13px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    color: $color-default-white;
+
+    p {
+      margin: 0;
+
+      @include vp-767 {
+        text-align: center;
+      }
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

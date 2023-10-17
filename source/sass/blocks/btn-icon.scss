@@ -1,0 +1,58 @@
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  color: $color-sapphire;
+  background-color: $color-transparent;
+  border: 1px solid $color-transparent;
+  border-radius: 50%;
+  transition: background-color $trans-default, border-color $trans-default, color $trans-default;
+  user-select: none;
+  outline: none;
+  -webkit-tap-highlight-color: $color-transparent;
+
+  &[href],
+  &[type] {
+    cursor: pointer;
+
+    @include hover-focus {
+      border-color: $color-sapphire;
+    }
+
+    @include active {
+      border-color: $color-sapphire;
+      background-color: $color-sapphire;
+      color: $color-default-white;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 32px;
+    height: 32px;
+
+    @include vp-767 {
+      width: 19px;
+      height: 19px;
+    }
+  }
+
+  &__wrapper svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:disabled,
+  &[disabled] {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+
+  &--rotate {
+    .btn-icon__wrapper {
+      transform: rotate(180deg);
+    }
+  }
+}

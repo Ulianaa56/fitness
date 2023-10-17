@@ -1,0 +1,22 @@
+mixin header(headerMods, currentUrl)
+  -
+    const headerLinks = [
+      {
+        href: "index.html",
+        text: "Главная"
+      },
+      {
+        href: "#",
+        text: "Страница 2"
+      },
+      {
+        href: "#",
+        text: "Страница 3"
+      },
+    ]
+
+  header.header(class=headerMods)
+    .container
+      +logo()
+      .header__link-box
+        +link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]}).header__main-phone

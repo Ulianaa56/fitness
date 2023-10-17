@@ -1,0 +1,94 @@
+.subscriptions {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 101px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    padding-top: 71px;
+    padding-bottom: 71px;
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    text-align: center;
+    color: $color-sapphire;
+
+    @include vp-1199 {
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 21px;
+    }
+  }
+
+  .tabs {
+    margin: 0 auto 38px auto;
+
+    @include vp-1199 {
+      margin-bottom: 44px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 34px;
+    }
+  }
+
+  &__block {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 40px;
+
+    @include vp-1199 {
+      grid-template-columns: 1fr;
+    }
+
+    @include vp-767 {
+      row-gap: 35px;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    right: 0;
+    bottom: -149px;
+    width: 287px;
+    height: 494px;
+    overflow: hidden;
+    pointer-events: none;
+
+    @include vp-1199 {
+      bottom: -126px;
+      width: 347px;
+      height: 445px;
+    }
+  }
+
+  &__decor img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: left;
+    user-select: none;
+    pointer-events: none;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  .card-subscription {
+    @include vp-1199 {
+      max-width: 442px;
+      margin: 0 auto;
+    }
+  }
+}

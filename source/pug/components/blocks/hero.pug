@@ -1,0 +1,30 @@
+mixin hero()
+  -
+    const textItems = [
+      {
+        text: "Тренажёрный зал",
+      },
+      {
+        text: "Групповые занятия",
+      },
+      {
+        text: "Кардио-зона",
+      },
+    ]
+
+  section.hero
+    .container.hero__inner
+      .hero__content
+        ul.hero__list
+          each item in textItems
+            li.hero__list-item
+              +text(item.text, "small")
+        .hero__title-wrapper
+          span.hero__subtitle.title.title--h3 Омск
+          +title({tag: "h1", mods: ["h1"], text: "Фитнес<br>Центр"}).hero__title
+        .hero__button-box
+          +btn({href: "#subscriptions", text: "Купить абонемент"}).hero__button
+      .hero__image-wrapper
+        .hero__image
+          .hero__image-inner
+            +picture("content", "hero", "jpg", 500, 524, "Фитнес Центр Supergym")

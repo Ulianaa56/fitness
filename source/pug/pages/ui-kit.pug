@@ -1,0 +1,662 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "UI-kit"
+
+block main
+  style
+    include ../../sass/inline/uikit.css
+    include ../../sass/inline/prism.css
+
+  main
+    .uikit
+      //----------------------- Разделы с компонентами
+      .uikit__sections
+        label(for="section-burger")
+          span Разделы&nbsp;компонентов
+        input.visually-hidden(type="checkbox", id="section-burger")
+        div
+          ul
+            li
+              a(href="#title") Заголовки
+            li
+              a(href="#text") Текст
+            li
+              a(href="#logo") Логотип
+            li
+              a(href="#buttons") Кнопки
+            li
+              a(href="#btn-icon") Кнопки с иконкой
+            li
+              a(href="#btn-play") Кнопка воспроизведения
+            li
+              a(href="#links") Ссылки
+            li
+              a(href="#socials") Соц. сети
+            li
+              a(href="#forms") Элементы форм
+            li
+              a(href="#form") Форма
+            li
+              a(href="#review") Карточка отзыва
+            li
+              a(href="#video") Видео
+            li
+              a(href="#card-subscription") Карточка абонемента
+            li
+              a(href="#card-coaches") Карточка тренера
+            li
+              a(href="#card-advantages") Карточка преимущества
+            li
+              a(href="#card-advantages-main") Карточка преимущества 2
+            li
+              a(href="#card-stock") Карточка акции
+            li
+              a(href="#banner-stock") Баннер акции
+            li
+              a(href="#tabs") Табы
+
+      //----------------------------------------------
+      .container
+        a.uikit__header-link(href="sitemap.html")
+          +icon("logo", "120", "23")
+        h1.uikit__title.uikit__title--h1 Компоненты, используемые на проекте
+
+        section
+          h2.uikit__title.uikit__title--h2 Название компонента или группы компонентов
+          p.uikit__text Информация о компоненте (подсказки \ предупреждение \ важная информация)
+          .uikit__component
+            p.uikit__text  Класс компонента \ модификаторы
+            pre
+              |
+              code(class="language-pug").
+                p Пример кода
+
+
+        //- Заголовки
+        section(id="title")
+          h2.uikit__title.uikit__title--h2 Заголовки
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h1
+            +title({tag: "h1", mods: ["h1"], text: "Заголовок"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h1", mods: ["h1"], text: "Заголовок"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h2
+            +title({tag: "h2", mods: ["h2"], text: "Заголовок"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h2", mods: ["h2"], text: "Заголовок"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h3
+            +title({tag: "h3", mods: ["h3"], text: "Заголовок"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h4
+            +title({tag: "h4", mods: ["h4"], text: "Заголовок"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h5
+            +title({tag: "h5", mods: ["h5"], text: "Заголовок"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h6
+            +title({tag: "h6", mods: ["h6"], text: "Заголовок"})
+
+
+        //- Текст
+        section(id="text")
+          h2.uikit__title.uikit__title--h2 Текст
+          .uikit__component
+            p.uikit__text.uikit__text--class .text \ .text--large
+            +text("Крупный текст", "large")
+            pre
+              |
+              code(class="language-pug").
+                +text("Крупный текст", "large")
+          .uikit__component
+            p.uikit__text.uikit__text--class .text \ .text--medium
+            +text("Стандартный текст")
+            pre
+              |
+              code(class="language-pug").
+                +text("Крупный текст")
+          .uikit__component
+            p.uikit__text.uikit__text--class .text \ .text--small
+            +text("Мелкий текст", "small")
+            pre
+              |
+              code(class="language-pug").
+                +text("Крупный текст", "small")
+
+        //- Логотип
+        section(id="logo")
+          h2.uikit__title.uikit__title--h2 Логотип
+          .uikit__component
+            p.uikit__text.uikit__text--class .logo (default)
+            .bg-gradient
+              +logo()
+            pre
+              |
+              code(class="language-pug").
+                +logo()
+
+
+        //- Кнопки
+        section(id="buttons")
+          h2.uikit__title.uikit__title--h2 Кнопки
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ default \ button
+            .bg-gradient
+              +btn({text: "Кнопка"})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ disabled \ button
+            .bg-gradient
+              +btn({text: "Текст"})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст"})(disabled)
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--dark \ button
+            +btn({text: "Текст", textSpan: true, mods: ["dark"]})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", textSpan: true, mods: ["dark"]})
+
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--dark disabled \ button
+            +btn({text: "Текст", textSpan: true, mods: ["dark"]})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", textSpan: true, mods: ["dark"]})(disabled)
+
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--tab \ button
+            +btn({text: "Текст", mods: ["tab"]})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", mods: ["tab"]})
+
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ .btn--tab disabled \ button
+            +btn({text: "Текст", mods: ["tab"]})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Текст", mods: ["tab"]})(disabled)
+
+        //- Кнопка с иконкой
+        section(id="btn-icon")
+          h2.uikit__title.uikit__title--h2 Кнопки с иконкой
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn-icon \ default \ button
+            +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"})
+            pre
+              |
+              code(class="language-pug").
+                +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn-icon \ .btn-icon--rotate \ button
+            +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32", mods: ["rotate"]})
+            pre
+              |
+              code(class="language-pug").
+                +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32", mods: ["rotate"]})
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn-icon \ disabled \ button
+            +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"})(disabled)
+
+        //- Кнопка воспроизведения
+        section(id="btn-play")
+          h2.uikit__title.uikit__title--h2 Кнопка воспроизведения
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn-play \ default \ button
+            .bg-grey
+              +btn-play({label: "Кнопка"})
+            pre
+              |
+              code(class="language-pug").
+                +btn-play({label: "Кнопка", icon: "icon-arrow", width: "16", height: "32"})
+
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn-play \ disabled \ button
+            +btn-play({label: "Кнопка"})(disabled)
+            pre
+              |
+              code(class="language-pug").
+                +btn-play({label: "Кнопка"})(disabled)
+
+
+        //- Ссылки
+        section(id="links")
+          h2.uikit__title.uikit__title--h2 Ссылки
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ default \ link
+            .bg-gradient
+              +link({text: "Ссылка", href: "#/"})
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка", href: "#/"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ disabled \ link
+            .bg-gradient
+              +link({text: "Ссылка"}).is-disabled
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка"}).is-disabled
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ .link--dark \ link
+            +link({text: "Ссылка", href: "#/", mods: ["dark"]})
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка", href: "#/", mods: ["dark"]})
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ .link--dark .is-disabled
+            +link({text: "Ссылка", mods: ["dark"]}).is-disabled
+            pre
+              |
+              code(class="language-pug").
+                +link({text: "Ссылка", mods: ["dark"]}).is-disabled
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ .link--main-phone
+            .bg-gradient
+              +link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]})
+            pre
+              |
+              code(class="language-pug").
+                +link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]})
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ .link--main-phone \ .is-disabled
+            .bg-gradient
+              +link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]}).is-disabled
+            pre
+              |
+              code(class="language-pug").
+                +link({href: "tel:78005555555", text: "8-800-555-55-55", mods: ["main-phone"]}).is-disabled
+
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ .link--light-thin
+            .bg-gradient
+              +link({href: "#", text: "Ссылка", mods: ["light-thin"]})
+            pre
+              |
+              code(class="language-pug").
+                +link({href: "#", text: "Ссылка", mods: ["light-thin"]})
+          .uikit__component
+            p.uikit__text.uikit__text--class .link \ .link--light-thin \ .is-disabled
+            .bg-gradient
+              +link({href: "#", text: "Ссылка", mods: ["light-thin"]}).is-disabled
+            pre
+              |
+              code(class="language-pug").
+                +link({href: "#", text: "Ссылка", mods: ["light-thin"]}).is-disabled
+
+
+        //- Соц. сети
+        section(id="socials")
+          h2.uikit__title.uikit__title--h2 Соц. сети
+          .uikit__component
+            p.uikit__text.uikit__text--class .socials \ default \ link
+            .bg-dark
+              +socials([
+                {iconName: "logo-vk", href: "#/", label: "В Контакте"},
+                {iconName: "logo-ok",href: "#/", label: "Одноклассники"},
+                {iconName: "logo-reddit", href: "#/", label: "Reddit"}
+              ])
+            pre
+              |
+              code(class="language-pug").
+                +socials([
+                  {iconName: "logo-vk", href: "#/", label: "В Контакте"},
+                  {iconName: "logo-ok",href: "#/", label: "Одноклассники"},
+                  {iconName: "logo-reddit", href: "#/", label: "Reddit"}
+                ])
+
+          .uikit__component
+            p.uikit__text.uikit__text--class .socials \ disabled \ link
+            .bg-dark
+              +socials([
+                {iconName: "logo-vk", href: "#/", label: "В Контакте", mod: "is-disabled"},
+                {iconName: "logo-ok",href: "#/", label: "Одноклассники", mod: "is-disabled"},
+                {iconName: "logo-reddit", href: "#/", label: "Reddit", mod: "is-disabled"}
+              ])
+            pre
+              |
+              code(class="language-pug").
+                +socials([
+                  {iconName: "logo-vk", href: "#/", label: "В Контакте", mod: "is-disabled"},
+                  {iconName: "logo-ok",href: "#/", label: "Одноклассники", mod: "is-disabled"},
+                  {iconName: "logo-reddit", href: "#/", label: "Reddit", mod: "is-disabled"}
+                ])
+
+
+        //- Элементы форм
+        section(id="forms")
+          h2.uikit__title.uikit__title--h2 Элементы форм
+          .uikit__component
+            p.uikit__text.uikit__text--class .custom-input \ type="text"
+            .bg-gradient
+              +custom-input({
+                inputPlaceholder: "Имя",
+                inputName: "user-name",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +custom-input({
+                  inputPlaceholder: "Имя",
+                  inputName: "user-name",
+                })
+          .uikit__component
+            p.uikit__text.uikit__text--class .custom-input \ type="tel"
+            .bg-gradient
+              +custom-input({
+                inputType: "tel",
+                inputPlaceholder: "Телефон",
+                inputName: "user-phone",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +custom-input({
+                  inputType: "tel",
+                  inputPlaceholder: "Телефон",
+                  inputName: "user-phone",
+                })
+          .uikit__component
+            p.uikit__text.uikit__text--class .custom-input \ type="email"
+            .bg-gradient
+              +custom-input({
+                inputType: "email",
+                inputPlaceholder: "E-mail",
+                inputName: "user-mail",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +custom-input({
+                  inputType: "email",
+                  inputPlaceholder: "E-mail",
+                  inputName: "user-mail",
+                })
+
+          .uikit__component
+            p.uikit__text.uikit__text--class +custom-toggle \ default
+            +custom-toggle({
+              inputLabel: "Чекбокс",
+              inputName: "user-agreement",
+              inputValue: "user-agreement-1",
+              inputChecked: false
+            }).custom-toggle--checkbox
+            pre
+              |
+              code(class="language-pug").
+                +custom-toggle({
+                  inputLabel: "Чекбокс",
+                  inputName: "user-agreement",
+                  inputValue: "user-agreement-1",
+                  inputChecked: false
+                }).custom-toggle--checkbox
+
+
+        //- Форма
+        section(id="form")
+          h2.uikit__title.uikit__title--h2 Форма
+          .uikit__component
+            .bg-gradient
+              div(style="width: 410px")
+                +form()
+            pre
+              |
+              code(class="language-pug").
+                +form()
+
+
+        //- Отзыв
+        section(id="review")
+          h2.uikit__title.uikit__title--h2 Карточка отзыва
+          .uikit__component
+            +card-review({
+              imgSource: "content",
+              imgName: "reviewer-1",
+              imgType: "jpg",
+              reviewer: "Анна Орлова",
+              text: "«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»",
+            })
+            pre
+                |
+                code(class="language-pug").
+                  +card-review({
+                    imgSource: "content",
+                    imgName: "reviewer-1",
+                    imgType: "jpg",
+                    reviewer: "Анна Орлова",
+                    text: "«Хожу в Supergym уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»",
+                  })
+
+
+        //- Видео
+        section(id="video")
+          h2.uikit__title.uikit__title--h2 Видео
+          .uikit__component
+            +video("https://www.youtube.com/embed/9TZXsZItgdw")
+            pre
+              |
+              code(class="language-pug").
+                +video("https://www.youtube.com/embed/9TZXsZItgdw")
+
+
+        //- Карточка абонемента
+        section(id="card-subscription")
+          h2.uikit__title.uikit__title--h2 Карточка абонемента
+          .uikit__component(style="background-color: #F8F9FC;")
+            p.uikit__text.uikit__text--class .card-subscription \ default
+            div(style="max-width: 360px; width: 100%;")
+              +card-subscription({
+                title: "С тренером",
+                info: "12 занятий",
+                price: "5000",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +card-subscription({
+                  title: "С тренером",
+                  info: "12 занятий",
+                  price: "5000",
+                })
+
+        //- Карточка тренера
+        section(id="card-coaches")
+          h2.uikit__title.uikit__title--h2 Карточка тренера
+          .uikit__component
+            p.uikit__text.uikit__text--class .card-coaches
+            div(style="max-width: 260px; width: 100%;")
+              +card-coaches({
+                name: "Анна Павлова",
+                direction: "CrossFit",
+                infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+                image: {
+                  path: "content/coaches",
+                  img: "photo-1",
+                  format: "jpg",
+                  width: "260",
+                  height: "164",
+                  alt: "Тренер",
+                },
+              })
+            pre
+              |
+              code(class="language-pug").
+                +card-coaches({
+                  name: "Анна Павлова",
+                  direction: "CrossFit",
+                  infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+                  image: {
+                    path: "content/coaches",
+                    img: "photo-1",
+                    format: "jpg",
+                    width: "260",
+                    height: "164",
+                    alt: "Тренер",
+                  },
+                })
+
+        //- Карточка преимущества
+        section(id="card-advantages")
+          h2.uikit__title.uikit__title--h2 Карточка преимущества
+          .uikit__component
+            p.uikit__text.uikit__text--class .card-advantages
+            div(style="max-width: 260px; width: 100%;")
+              +card-advantages({
+                title: "Площадь",
+                text: "Занимайтесь без очередей и толкучки",
+                number: "900",
+                units: "кв/м",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +card-advantages({
+                  title: "Площадь",
+                  text: "Занимайтесь без очередей и толкучки",
+                  number: "900",
+                  units: "кв/м",
+                })
+
+        //- Карточка преимущества 2
+        section(id="card-advantages-main")
+          h2.uikit__title.uikit__title--h2 Карточка преимущества 2
+          .uikit__component
+            p.uikit__text.uikit__text--class .card-advantages-main
+            div(style="max-width: 240px; width: 100%;")
+              +card-advantages-main({
+                number: "100",
+                title: "Тренажеров",
+                text: "Современные тренажеры на все группы мышц",
+              })
+            pre
+              |
+              code(class="language-pug").
+                +card-advantages-main({
+                  number: "100",
+                  title: "Тренажеров",
+                  text: "Современные тренажеры на все группы мышц",
+                })
+
+        //- Карточка акции
+        section(id="card-stock")
+          h2.uikit__title.uikit__title--h2 Карточка акции
+          .uikit__component
+            p.uikit__text.uikit__text--class .card-stock
+            +card-stock({
+              title: "Месяц бесплатно",
+              text: "Приведи друга, получи абонемент в подарок",
+            })
+            pre
+              |
+              code(class="language-pug").
+                +card-stock({
+                  title: "Месяц бесплатно",
+                  text: "Приведи друга, получи абонемент в подарок",
+
+                })
+        //- Баннеры
+        section(id="banner-stock")
+          h2.uikit__title.uikit__title--h2 Баннер акции
+          .uikit__component
+            p.uikit__text.uikit__text--class .banner-stock
+              +banner-stock({
+                title: "Год",
+                price: "4999",
+                text: "Безлимитный абонемент в тренажерный зал",
+                img: {
+                  name: "banner-stock",
+                  path: "content/stock",
+                  format: "jpg",
+                  width: "280",
+                  height: "462",
+                  altText: "Девушка",
+                }
+              })
+            pre
+              |
+              code(class="language-pug").
+                +banner-stock({
+                  title: "Год",
+                  price: "4999",
+                  text: "Безлимитный абонемент в тренажерный зал",
+                  img: {
+                    name: "banner-stock",
+                    path: "content/stock",
+                    format: "jpg",
+                    width: "280",
+                    height: "462",
+                    altText: "Девушка",
+                  }
+                })
+
+
+        //- Табы
+        section(id="tabs")
+          h2.uikit__title.uikit__title--h2 табы
+          .uikit__component
+            p.uikit__text.uikit__text--class .tabs
+            +tabs([
+              {
+                text: "1 месяц",
+                mods: "is-active",
+              },
+              {
+                text: "6 месяцев",
+              },
+              {
+                text: "12 месяцев",
+                mods: "is-disabled",
+              },
+            ])
+            pre
+              |
+              code(class="language-pug").
+                +tabs([
+                  {
+                    text: "1 месяц",
+                    mods: "is-active",
+                  },
+                  {
+                    text: "6 месяцев",
+                  },
+                  {
+                    text: "12 месяцев",
+                  },
+                  {
+                    text: "24 месяца",
+                    mods: "is-disabled",
+                  },
+                ])
+
+
+
+  script
+    include ../../js/inline/ui-kit.js
+
+block modals
+  +modal("modal--feedback")(data-modal="feedback")
+    +modal-feedback()
+  +modal("modal--success modal--no-scale modal--fit-content")(data-modal="success")
+    +modal-success()

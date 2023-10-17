@@ -1,0 +1,149 @@
+.card-subscription {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 64px 43px 68px 43px;
+  background-color: $color-default-white;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 65px 38px 67px 38px;
+  }
+
+  @include vp-767 {
+    padding: 52px 30px 54px 30px;
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  .title {
+    margin-bottom: 11px;
+    text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 12px;
+    }
+  }
+
+  .text {
+    margin-bottom: 12px;
+    text-align: center;
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__price-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 28px;
+    margin-top: auto;
+    isolation: isolate;
+
+    @include vp-767 {
+      min-height: 120px;
+      margin-bottom: 26px;
+    }
+  }
+
+  &__shadow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    margin: 0;
+    font-size: 100px;
+    line-height: 150%;
+    font-weight: 700;
+    color: rgba($color-whisper, 0.48);
+    text-align: center;
+    transform: translate(-50%, -50%);
+    overflow-wrap: anywhere;
+    z-index: -1;
+
+
+    @include vp-767 {
+      font-size: 80px;
+    }
+  }
+
+  &__price {
+    margin: 0;
+    padding-bottom: 6px;
+    font-size: 60px;
+    line-height: 150%;
+    font-weight: 700;
+    color: $color-egyptian-blue;
+    overflow-wrap: anywhere;
+
+    @include vp-767 {
+      font-size: 48px;
+      padding-bottom: 4px;
+    }
+  }
+
+  &__ruble {
+    display: inline-block;
+    width: 30px;
+    height: 42px;
+    margin-left: 14px;
+    color: $color-sapphire;
+    flex-shrink: 0;
+
+    @include vp-767 {
+      width: 24px;
+      height: 33px;
+      margin-left: 11px;
+    }
+  }
+
+  &__ruble svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__btn {
+    min-width: 208px;
+    min-height: 66px;
+    margin-bottom: 20px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 7px solid $color-transparent;
+      z-index: 1;
+      cursor: pointer;
+      mask: linear-gradient($color-default-white 0 0) padding-box, linear-gradient($color-default-white 0 0);
+      mask-composite: exclude;
+      background: $gradient-border border-box;
+      transition: opacity $trans-default;
+      opacity: 0;
+    }
+
+    @include hover-focus() {
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    @include active {
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

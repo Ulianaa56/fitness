@@ -1,0 +1,54 @@
+.card-advantages-main {
+  background-color: $color-resolution-blue;
+  color: $color-default-white;
+  padding: 54px 34px 58px;
+
+  @include vp-1199 {
+    padding: 33px 34px 38px;
+  }
+
+  @include vp-767 {
+    padding: 28px 34px 43px;
+  }
+
+  &__number {
+    margin: 0 4px 8px 0;
+    font-size: 74px;
+    line-height: 1;
+    font-weight: 700;
+    text-align: center;
+    overflow-wrap: anywhere;
+
+    @include vp-1199 {
+      margin-right: 5px;
+      margin-bottom: 3px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 5px;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 39px;
+    text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 19px;
+    }
+
+    @include vp-1199 {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include vp-1199 {
+      max-width: 180px;
+      margin: 0 auto;
+    }
+  }
+}

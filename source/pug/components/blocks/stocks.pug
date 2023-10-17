@@ -1,0 +1,35 @@
+-
+  const banner = {
+    title: "Год",
+    price: "4999",
+    text: "Безлимитный абонемент в&nbsp;тренажерный зал",
+    img: {
+      name: "banner-stock",
+      path: "content/stock",
+      format: "jpg",
+      width: "280",
+      height: "462",
+      altText: "Девушка",
+    }
+  }
+
+  const cards = [
+    {
+      title: "Месяц бесплатно",
+      text: "Приведи друга, получи абонемент в&nbsp;подарок",
+    },
+    {
+      title: "Скидка 20%",
+      text: "Корпоративный фитнес с&nbsp;командой",
+    }
+  ]
+
+mixin stocks()
+  section.stocks
+    .container
+      +title({tag: "h2", text: "Акции", mods: ["h3"]}).stocks__title
+      .stocks__wrapper
+        .stocks__banner
+          +banner-stock(banner)
+        each item in cards
+          +card-stock(item)

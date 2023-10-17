@@ -1,0 +1,122 @@
+-
+  const coaches = [
+    {
+      name: "Анна Павлова",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-1",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Алексей Лавров",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-2",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Александр Пашков",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-3",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Мария Кетова",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-4",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Анна Павлова",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-1",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Алексей Лавров",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-2",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Александр Пашков",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-3",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+    {
+      name: "Мария Кетова",
+      direction: "CrossFit",
+      infoList: ["Certified Level 3 Trainer", "Победитель чемпионата России по CrossFit", "Опыт — 6 лет"],
+      image: {
+        path: "content/coaches",
+        img: "photo-4",
+        format: "jpg",
+        width: "260",
+        height: "164",
+        alt: "Тренер",
+      },
+    },
+
+  ]
+
+mixin coaches()
+  section.coaches
+    .container
+      +title({tag: "h2", text: "Тренеры", mods: ["h3"]}).coaches__title
+      .coaches__slider-block
+        .coaches__slider
+          .coaches__swiper.swiper(data-slider="coaches")
+            .coaches__swiper-wrapper.swiper-wrapper
+              each item in coaches
+                .coaches__slide.swiper-slide
+                  +card-coaches(item)
+        +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32"}).coaches__btn.coaches__btn--left(data-slider="button-prev")
+        +btn-icon({label: "Кнопка", icon: "icon-arrow", width: "32", height: "32", mods: ["rotate"]}).coaches__btn.coaches__btn--right(data-slider="button-next")

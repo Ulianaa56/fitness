@@ -1,0 +1,8 @@
+mixin card-advantages-main(options = {})
+  - const number = options.number || ""
+  - const title = options.title || ""
+  - const text = options.text || ""
+  .card-advantages-main
+    p.card-advantages-main__number!= number
+    +title({tag: "p", text: title, mods: ["h4"]}).card-advantages-main__title
+    +text(text, "medium").card-advantages-main__text

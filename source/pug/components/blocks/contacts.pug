@@ -1,0 +1,52 @@
+mixin contacts()
+  -
+    const conactsData = [
+      {
+        name: "Адрес:",
+        data: "г. Омск, ул. 60 лет Октября, 7",
+        tag: "address",
+      },
+      {
+        name: "Телефон:",
+        data: "8-800-555-55-55",
+        tag: "a",
+        href: "tel:88005555555",
+      },
+      {
+        name: "График работы:",
+        data: "Пн-Вс: с 8:00 до 22:00",
+      },
+      {
+        name: "Email:",
+        data: "omsk@supergym.ru",
+        tag: "a",
+        href: "mailto:omsk@supergym.ru",
+      },
+    ]
+
+  section.contacts
+    .contacts__inner.contacts__inner--left
+      .contacts__form-wrapper
+        +form()
+    .contacts__inner.contacts__inner--right
+      .contacts__content
+        +title({tag: "h2", mods: ["h3"], text: "Контакты"}).contacts__title
+        .contacts__content-box
+          .contacts__content-box-left
+            each item, index in conactsData
+              if (index % 2 == 0)
+                .contacts__content-item
+                  p.contacts__content-item-title!= item.name
+                  if item.tag === "a"
+                    +link({href: item.href, mods: ["dark-thin"], spanText: item.data}).contacts__link
+                  else
+                    +text(item.data, "small", item.tag)
+          .contacts__content-box-right
+            each item, index in conactsData
+              if (index % 2 != 0)
+                .contacts__content-item
+                  p.contacts__content-item-title!= item.name
+                  if item.tag === "a"
+                    +link({href: item.href, mods: ["dark-thin"], spanText: item.data}).contacts__link
+                  else
+                    +text(item.data, "small", item.tag)

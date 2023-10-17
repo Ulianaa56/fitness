@@ -1,0 +1,19 @@
+mixin card-review(options = {})
+  -
+    const image = {
+      source: options.imgSource,
+      name: options.imgName,
+      type: options.imgType,
+    }
+    const reviewer = options.reviewer
+    const reviewText = options.text
+
+  .card-review
+    .card-review__inner
+      .card-review__photo-box
+        .card-review__photo-wrapper
+          +picture(image.source, image.name, image.type, 80, 80, reviewer)
+      .card-review__content
+        +title({tag: "h3", mods: ["h6"], text: reviewer}).card-review__name-box
+        .card-review__text.text.text--medium
+          p!= reviewText

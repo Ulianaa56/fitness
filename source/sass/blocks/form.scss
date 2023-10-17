@@ -1,0 +1,63 @@
+.form {
+  color: $color-default-white;
+
+  &__title {
+    margin-bottom: 33px;
+
+    @include vp-1199 {
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 30px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__input-box {
+    align-self: stretch;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    @include vp-1199 {
+      gap: 60px;
+      margin-bottom: 28px;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: unset;
+      margin-bottom: 38px;
+
+      .custom-input:not(:last-child) {
+        margin-bottom: 23px;
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+
+    @include vp-1199 {
+      max-width: 471px;
+    }
+
+    @include vp-767 {
+      max-width: 400px;
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 15px;
+    }
+  }
+}
